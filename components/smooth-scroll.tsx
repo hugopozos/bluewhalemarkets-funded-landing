@@ -90,7 +90,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
           document.body.style.height = `${footerBottom}px`;
         } else {
           // Si no hay footer, usar la altura calculada
-          document.body.style.height = `${exactHeight}px`;
+        document.body.style.height = `${exactHeight}px`;
         }
       }
       
