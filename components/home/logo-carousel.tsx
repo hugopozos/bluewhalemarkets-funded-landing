@@ -1,47 +1,9 @@
 "use client"
 
-import { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-// Función para animar el carousel
-const animateCarousel = (container: HTMLDivElement | null, direction: 1 | -1, speed: number) => {
-  if (!container) return
-  
-  let scrollAmount = 0
-  const distance = 1 // Pixels por frame
-  
-  const scroll = () => {
-    if (!container) return
-    
-    scrollAmount += distance
-    container.scrollLeft += distance * direction
-    
-    // Reset cuando el scroll llega al final para crear un loop infinito
-    if (scrollAmount >= container.scrollWidth / 2) {
-      container.scrollLeft = 0
-      scrollAmount = 0
-    }
-    
-    requestAnimationFrame(scroll)
-  }
-  
-  requestAnimationFrame(scroll)
-}
-
 export default function LogoCarousel() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  
-  useEffect(() => {
-    // Iniciar animación cuando el componente se monta
-    animateCarousel(containerRef.current, 1, 1)
-    
-    // Limpiar animación cuando el componente se desmonta
-    return () => {
-      // No hay nada que limpiar en este caso ya que utilizamos requestAnimationFrame
-    }
-  }, [])
-  
   // Logos de empresas con sus enlaces correspondientes
   const logos = [
     { 
@@ -78,35 +40,53 @@ export default function LogoCarousel() {
 
   return (
     <div className="relative w-full overflow-hidden">
-      {/* Capa de fading en los bordes */}
-      <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-black to-transparent"></div>
-      <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-black to-transparent"></div>
-      
-      {/* Contenedor de logos con scroll */}
-      <div 
-        ref={containerRef}
-        className="flex space-x-16 py-4 whitespace-nowrap overflow-x-scroll scrollbar-hide"
-      >
-        {/* Duplicamos los logos para crear efecto infinito */}
-        {[...logos, ...logos].map((logo, index) => (
-          <div key={index} className="flex items-center justify-center">
-            <Link 
-              href={logo.url} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="h-8 relative w-24 flex items-center justify-center hover:opacity-100 transition-opacity"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.name}
-                width={96}
-                height={32}
-                className="max-h-8 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
-                title={logo.name}
-              />
-            </Link>
-          </div>
-        ))}
+      {/* Aplicamos una máscara CSS al contenedor principal */}
+      <div className="w-full overflow-hidden py-6" 
+        style={{
+          maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
+        }}>
+        <div 
+          className="flex space-x-24 py-4 animate-slide"
+          style={{
+            whiteSpace: 'nowrap',
+            width: 'max-content',
+            animation: 'slideLogos 30s linear infinite'
+          }}
+        >
+          {/* Duplicamos los logos para crear efecto infinito */}
+          {[...logos, ...logos].map((logo, index) => (
+            <div key={index} className="flex items-center justify-center">
+              <Link 
+                href={logo.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="h-14 relative w-40 flex items-center justify-center hover:opacity-100 transition-opacity"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={160}
+                  height={56}
+                  className="max-h-14 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                  title={logo.name}
+                />
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        {/* Definición de la animación CSS */}
+        <style jsx global>{`
+          @keyframes slideLogos {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        `}</style>
       </div>
     </div>
   )
