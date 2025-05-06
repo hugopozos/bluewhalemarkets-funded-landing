@@ -9,7 +9,7 @@ const manrope = Manrope({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Workflow Automation Platform",
   description: "Automate and simplify your workflow with ease",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
