@@ -8,6 +8,7 @@ import CTASection from "@/components/home/cta-section"
 import SmoothScrollLinks from "@/components/smooth-scroll-links"
 import HeroSection from "@/components/home/hero-section"
 import ChallengesTable from "@/components/home/challenges-table"
+import HeroDashboardPreview from "@/components/home/hero-dashboard-preview"
 
 export default function Home() {
   return (
@@ -33,20 +34,52 @@ export default function Home() {
         {/* Hero Section con Dashboard y Video de Fondo */}
         <HeroSection />
 
+        {/* Dashboard Preview Section */}
+        <section id="platform-preview" className="py-24 bg-black relative">
+          {/* Fondo con efecto de puntos */}
+          <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"></div>
+          
+          <div className="max-w-5xl mx-auto px-4 relative">
+            <div className="flex flex-col items-center text-center mb-16">
+              <div className="inline-block px-4 py-1 rounded-full border border-gray-800 text-sm text-gray-400 mb-6">
+                Platform Preview
+              </div>
+              <h2 className="text-4xl md:text-5xl font-medium mb-6 max-w-3xl">
+                Advanced trading dashboard designed for optimal performance
+              </h2>
+              <p className="text-gray-400 max-w-2xl">
+                Our intuitive interface gives you complete control over your trading journey with real-time analytics and powerful tools
+              </p>
+            </div>
+            
+            <HeroDashboardPreview />
+          </div>
+        </section>
+
         {/* Features Section */}
-        <FeaturesSection />
+        <section id="trading-tools">
+          <FeaturesSection />
+        </section>
 
         {/* Challenges Table Section */}
-        <ChallengesTable />
+        <section id="challenges">
+          <ChallengesTable />
+        </section>
 
         {/* How It Works Section */}
-        <HowItWorksSection />
+        <section id="how-it-works">
+          <HowItWorksSection />
+        </section>
 
         {/* Testimonials Section */}
-        <TestimonialsSection />
+        <section id="testimonials">
+          <TestimonialsSection />
+        </section>
 
         {/* CTA Section */}
-        <CTASection />
+        <section id="get-started">
+          <CTASection />
+        </section>
       </main>
 
       {/* Footer */}

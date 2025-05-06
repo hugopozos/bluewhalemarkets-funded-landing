@@ -7,9 +7,14 @@ import SmoothScroll from "@/components/smooth-scroll"
 const manrope = Manrope({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Workflow Automation Platform",
-  description: "Automate and simplify your workflow with ease",
-  generator: 'v0.dev'
+  title: "Blue Whale Markets Funded",
+  description: "Trade with our capital and keep up to 90% of the profits. Simple, transparent, and fair.",
+  generator: 'Next.js',
+  icons: {
+    icon: '/images/application-logo.webp',
+    apple: '/images/application-logo.webp',
+    shortcut: '/images/application-logo.webp'
+  }
 }
 
 export default function RootLayout({
@@ -21,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/application-logo.webp" />
       </head>
       <body className={manrope.className}>
         <SmoothScroll>{children}</SmoothScroll>

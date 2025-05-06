@@ -65,13 +65,13 @@ export default function HeroVideoBackground() {
         height="720"
         disablePictureInPicture
         disableRemotePlayback
-        className={`absolute w-full h-full object-cover transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${isLoaded ? 'opacity-80' : 'opacity-0'}`}
         style={{
-          filter: "brightness(0.5) saturate(1.2)",
+          filter: "brightness(0.6) saturate(1.1) contrast(1.1)",
         }}
         onLoadedData={() => setIsLoaded(true)}
       >
-        <source src="/videos/ocean01.webm" type="video/webm" />
+        <source src="/videos/video-hero.mp4" type="video/mp4" />
       </video>
     )
   }
@@ -86,18 +86,34 @@ export default function HeroVideoBackground() {
       {/* Video de fondo (solo se carga en desktop y después de interacción) */}
       {loadVideo()}
       
-      {/* Capa de opacidad adicional */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      {/* Capa de color azul oscuro con baja opacidad para efecto duotono */}
+      <div className="absolute inset-0 bg-blue-900/30 mix-blend-color"></div>
       
-      {/* Gradiente superpuesto - efecto viñeta con centro más claro */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+      {/* Capa de oscuridad general para mejorar legibilidad */}
+      <div className="absolute inset-0 bg-black/35"></div>
       
-      {/* Viñeta para oscurecer los bordes */}
-      <div className="absolute inset-0 bg-radial-gradient pointer-events-none" 
+      {/* Efecto de viñeta avanzado para destacar el centro donde suele estar el texto */}
+      <div className="absolute inset-0" 
         style={{
-          background: 'radial-gradient(circle at center, transparent 15%, rgba(0,0,0,0.65) 85%)'
+          background: 'radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.4) 80%)',
+          backdropFilter: 'blur(1px)'
         }}
-      />
+      ></div>
+      
+      {/* Capa negra sólida en la parte superior para evitar la línea de separación */}
+      <div className="absolute inset-x-0 -top-1 h-3 bg-black transform scale-x-110"></div>
+      
+      {/* Gradiente superior para una transición suave - muy sutil */}
+      <div className="absolute inset-x-0 top-0 h-2 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+      
+      {/* Gradiente inferior ampliado para evitar línea durante el scroll */}
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+      
+      {/* Capa de corrección para bordes durante scroll */}
+      <div className="absolute inset-x-0 bottom-0 h-2 bg-black"></div>
+      
+      {/* Capa extra para prevenir líneas al hacer scroll */}
+      <div className="absolute inset-x-0 -bottom-1 h-2 bg-black transform scale-110"></div>
     </div>
   )
 } 

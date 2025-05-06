@@ -70,10 +70,10 @@ export default function FeaturesSection() {
           {/* Feature Card 1 - Discord Community */}
           <div
             ref={(el) => setCardRef(el, 0)}
-            className="bg-gradient-to-br from-black to-[#0c0e1a] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group opacity-0 translate-y-8 transition-all duration-700 ease-out"
+            className="bg-gradient-to-br from-black to-[#0F2A38] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group opacity-0 translate-y-8 transition-all duration-700 ease-out"
           >
             {/* Efecto de resplandor Discord */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/10 blur-3xl rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#1F485E]/10 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
 
             <div className="flex justify-center mb-4">
               <div className="relative h-12 w-12">
@@ -97,10 +97,10 @@ export default function FeaturesSection() {
                   <MessagesSquare className="w-3 h-3 text-indigo-500" />
                 </div>
                 {/* Línea conectora */}
-                <div className="absolute h-6 w-0.5 bg-gradient-to-b from-indigo-500/50 to-transparent -bottom-6"></div>
+                <div className="absolute h-6 w-0.5 bg-gradient-to-b from-[#1F485E]/40 to-transparent -bottom-6"></div>
               </div>
 
-              <div className="w-full bg-[#0A0A0A]/80 backdrop-blur-sm border border-gray-800 rounded-lg p-4 shadow-[0_0_15px_rgba(99,102,241,0.1)]">
+              <div className="w-full bg-[#0A0A0A]/80 backdrop-blur-sm border border-gray-800 rounded-lg p-4 shadow-[0_0_15px_rgba(31,72,94,0.08)]">
                 <div className="flex items-start gap-2 mb-4">
                   <div className="min-w-6 h-6 rounded-full bg-indigo-500/10 flex items-center justify-center mt-1">
                     <span className="text-indigo-500 text-xs">🎮</span>
@@ -111,10 +111,10 @@ export default function FeaturesSection() {
                 <div className="text-sm text-gray-300 mb-4 pl-8">Connect with 5,000+ traders worldwide</div>
 
                 <div className="flex gap-2 pl-8 mb-4">
-                  <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-indigo-500/30 transition-colors">
+                  <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-[#1F485E]/30 transition-colors">
                     Live analysis
                   </button>
-                  <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-indigo-500/30 transition-colors">
+                  <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-[#1F485E]/30 transition-colors">
                     Trading ideas
                   </button>
                 </div>
@@ -132,10 +132,10 @@ export default function FeaturesSection() {
           {/* Feature Card 2 - 24/5 Support */}
           <div
             ref={(el) => setCardRef(el, 1)}
-            className="bg-gradient-to-br from-black to-[#041204] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100"
+            className="bg-gradient-to-br from-black to-[#634F36] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100"
           >
-            {/* Efecto de resplandor verde */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-green-500/10 blur-3xl rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-700"></div>
+            {/* Efecto de resplandor dorado */}
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#B5946E]/10 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
 
             <h3 className="text-xl font-medium mb-3 text-center">24/5 Dedicated Support</h3>
             <p className="text-gray-400 text-center text-sm mb-8">
@@ -144,29 +144,29 @@ export default function FeaturesSection() {
 
             <div className="mt-auto flex flex-col items-center relative z-10">
               <div className="w-10 h-10 rounded-lg bg-[#111] border border-gray-800 flex items-center justify-center mb-6 relative">
-                <div className="w-5 h-5 rounded-sm bg-green-500/20 flex items-center justify-center">
-                  <Clock className="w-3 h-3 text-green-500" />
+                <div className="w-5 h-5 rounded-sm bg-[#B5946E]/10 flex items-center justify-center">
+                  <Clock className="w-3 h-3 text-[#B5946E]/80" />
                 </div>
                 {/* Línea conectora */}
-                <div className="absolute h-6 w-0.5 bg-gradient-to-b from-green-500/50 to-transparent -bottom-6"></div>
+                <div className="absolute h-6 w-0.5 bg-gradient-to-b from-[#B5946E]/30 to-transparent -bottom-6"></div>
               </div>
 
-              <div className="w-full bg-[#0A0A0A]/80 backdrop-blur-sm border border-gray-800 rounded-lg p-4 shadow-[0_0_15px_rgba(34,197,94,0.1)]">
+              <div className="w-full bg-[#0A0A0A]/80 backdrop-blur-sm border border-gray-800 rounded-lg p-4 shadow-[0_0_15px_rgba(181,148,110,0.08)]">
                 <div className="bg-[#111] border border-gray-800 rounded-lg px-3 py-2 mb-4 flex items-center justify-between">
                   <div className="flex items-center">
                     <span className="text-xs text-gray-400">Average</span>
-                    <span className="text-xs text-green-500 mx-1">Response</span>
+                    <span className="text-xs text-[#B5946E]/90 mx-1">Response</span>
                     <span className="text-xs text-gray-400">Time</span>
                   </div>
-                  <div className="w-4 h-4 rounded-full bg-[#0A0A0A] border border-gray-800 flex items-center justify-center">
-                    <span className="text-xs">↓</span>
+                  <div className="w-4 h-4 rounded-full bg-[#B5946E]/10 flex items-center justify-center">
+                    <span className="text-[#B5946E]/80 text-xs">✓</span>
                   </div>
                 </div>
 
                 <div className="mb-3">
                   <div className="flex items-center gap-2 mb-1">
-                    <div className="w-4 h-4 rounded-full bg-green-500/20 flex items-center justify-center">
-                      <span className="text-green-500 text-xs">✓</span>
+                    <div className="w-4 h-4 rounded-full bg-[#B5946E]/10 flex items-center justify-center">
+                      <span className="text-[#B5946E]/80 text-xs">✓</span>
                     </div>
                     <div className="text-xs text-gray-300">Support Channels</div>
                   </div>
@@ -177,10 +177,10 @@ export default function FeaturesSection() {
                 </div>
 
                 <div className="flex gap-2 justify-center">
-                  <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-green-500/30 transition-colors">
+                  <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-[#B5946E]/20 transition-colors">
                     Contact Support
                   </button>
-                  <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-green-500/30 transition-colors">
+                  <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-[#B5946E]/20 transition-colors">
                     Help Center
                   </button>
                 </div>
@@ -205,10 +205,10 @@ export default function FeaturesSection() {
           {/* Feature Card 3 - Broker Information */}
           <div
             ref={(el) => setCardRef(el, 2)}
-            className="bg-gradient-to-br from-black to-[#040e1a] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200"
+            className="bg-gradient-to-br from-black to-[#0F2A38] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200"
           >
             {/* Efecto de resplandor azul */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#1F485E]/10 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
 
             <div className="flex justify-center mb-6">
               <Image 
@@ -242,14 +242,14 @@ export default function FeaturesSection() {
 
               <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2 mb-2">
                 <div className="flex items-center gap-2">
-                  <div className="w-1 h-4 bg-blue-500 rounded-full"></div>
+                  <div className="w-1 h-4 bg-[#1F485E]/70 rounded-full"></div>
                   <div className="text-xs">Tight spreads starting from 0.0 pips</div>
                 </div>
               </div>
 
               <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2">
                 <div className="flex items-center gap-2">
-                  <div className="w-1 h-4 bg-blue-500 rounded-full"></div>
+                  <div className="w-1 h-4 bg-[#1F485E]/70 rounded-full"></div>
                   <div className="text-xs">Advanced risk management tools</div>
                 </div>
               </div>
@@ -259,10 +259,10 @@ export default function FeaturesSection() {
           {/* Feature Card 4 - MT5 Platform */}
           <div
             ref={(el) => setCardRef(el, 3)}
-            className="bg-gradient-to-br from-black to-[#120412] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300"
+            className="bg-gradient-to-br from-black to-[#634F36] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300"
           >
-            {/* Efecto de resplandor púrpura */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-purple-500/10 blur-3xl rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-700"></div>
+            {/* Efecto de resplandor dorado */}
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#B5946E]/10 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
 
             <div className="flex justify-center mb-6">
               <Image 
@@ -280,8 +280,8 @@ export default function FeaturesSection() {
 
             <div className="mt-auto relative z-10">
               <div className="flex items-start gap-2 mb-3">
-                <div className="min-w-5 h-5 rounded-full bg-purple-500/10 flex items-center justify-center mt-0.5">
-                  <span className="text-purple-500 text-xs font-bold">📊</span>
+                <div className="min-w-5 h-5 rounded-full bg-[#B5946E]/10 flex items-center justify-center mt-0.5">
+                  <span className="text-[#B5946E]/80 text-xs font-bold">📊</span>
                 </div>
                 <div className="text-sm font-medium">Platform Features</div>
               </div>
@@ -289,19 +289,19 @@ export default function FeaturesSection() {
               <div className="grid grid-cols-1 gap-2">
                 <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2 flex items-center justify-between">
                   <div className="text-xs">Advanced Charts</div>
-                  <div className="text-xs text-purple-500">Multiple Timeframes</div>
+                  <div className="text-xs text-[#B5946E]/80">Multiple Timeframes</div>
                 </div>
                 <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2 flex items-center justify-between">
                   <div className="text-xs">Custom Indicators</div>
-                  <div className="text-xs text-purple-500">2,000+ Available</div>
+                  <div className="text-xs text-[#B5946E]/80">2,000+ Available</div>
                 </div>
                 <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2 flex items-center justify-between">
                   <div className="text-xs">Automated Trading</div>
-                  <div className="text-xs text-purple-500">EA Support</div>
+                  <div className="text-xs text-[#B5946E]/80">EA Support</div>
                 </div>
                 <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2 flex items-center justify-between">
                   <div className="text-xs">Available On</div>
-                  <div className="text-xs text-purple-500">Desktop & Mobile</div>
+                  <div className="text-xs text-[#B5946E]/80">Desktop & Mobile</div>
                 </div>
               </div>
             </div>

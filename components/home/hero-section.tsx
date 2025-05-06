@@ -14,7 +14,7 @@ const HeroVideoBackground = dynamic(() => import('@/components/home/hero-video-b
 // Componente optimizado con memo para evitar rerenderizados innecesarios
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center">
+    <section className="relative h-screen flex items-center justify-center -mt-[1px]">
       {/* Video de fondo optimizado */}
       <HeroVideoBackground />
       
