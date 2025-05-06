@@ -19,6 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/_next/static/css/899b3487162bd47f.css" />
+      </head>
       <body className={manrope.className}>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
