@@ -9,14 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export',
-  trailingSlash: true,
-  distDir: 'dist',
   basePath: '',
   assetPrefix: '',
   crossOrigin: 'anonymous',
-  // Configuración para minimizar errores JavaScript
-  swcMinify: false,
   productionBrowserSourceMaps: false
 }
 
