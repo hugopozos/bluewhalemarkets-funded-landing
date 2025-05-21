@@ -206,7 +206,7 @@ export default function TestimonialsSection() {
                 href="https://www.trustpilot.com/review/clubprotraders.com?starts=5"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-w-[320px] max-w-[320px] bg-gradient-to-br from-black to-[#080816] border border-gray-800 rounded-xl p-5 flex flex-col hover:brightness-110 transition-all duration-300"
+                // className="min-w-[320px] max-w-[320px] bg-gradient-to-br from-black to-[#080816] border border-gray-800 rounded-xl p-5 flex flex-col hover:brightness-110 transition-all duration-300"
               >
               <div
                 key={`${testimonial.name}-${index}`}

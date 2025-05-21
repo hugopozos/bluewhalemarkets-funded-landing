@@ -19,19 +19,19 @@ export default function Navbar() {
 
         {/* Menú compacto */}
         <nav className="hidden md:flex items-center space-x-4 mx-2">
-          <Link href="/" className="text-[11px] font-medium text-gray-300 hover:text-white transition-colors">
+          <Link href="/" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">
             Home
           </Link>
-          <Link href="#platform-preview" className="text-[11px] font-medium text-gray-300 hover:text-white transition-colors">
+          <Link href="#platform-preview" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">
             Platform
           </Link>
-          <Link href="#trading-tools" className="text-[11px] font-medium text-gray-300 hover:text-white transition-colors">
+          <Link href="#trading-tools" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">
             Tools
           </Link>
-          <Link href="#challenges" className="text-[11px] font-medium text-gray-300 hover:text-white transition-colors">
+          <Link href="#challenges" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">
             Challenges
           </Link>
-          <Link href="#how-it-works" className="text-[11px] font-medium text-gray-300 hover:text-white transition-colors">
+          <Link href="#how-it-works" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">
             How To
           </Link>
         </nav>
