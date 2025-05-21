@@ -1,56 +1,49 @@
-import Link from "next/link"
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <header className="relative z-20 bg-black shadow-sm shadow-black/30 border-b border-black">
-      <div className="container mx-auto px-6 py-5 flex items-center justify-between backdrop-blur-sm">
+    <header className="fixed top-6 left-2 right-2 z-50 bg-black bg-opacity-80 shadow-md rounded-2xl border border-gray-800 backdrop-blur-sm mx-auto max-w-5xl">
+      <div className="px-4 py-4 flex items-center justify-between h-16">
+        {/* Logo más compacto */}
         <div className="flex items-center">
           <Image
             src="/images/application-logo.png"
-            alt="Application Logo"
-            width={150}
+            alt="Logo"
+            width={130}
             height={40}
-            className="h-10 w-auto"
-            quality={100}
+            className="h-8 w-auto"
             priority
-            unoptimized
           />
         </div>
 
-        <nav className="hidden md:flex items-center justify-center flex-1 px-4">
-          <div className="flex items-center space-x-8">
-            <Link href="/" className="text-sm font-medium text-gray-300 hover:text-white transition">
-              Home
-            </Link>
-            <Link href="#platform-preview" className="text-sm font-medium text-gray-300 hover:text-white transition">
-              Platform
-            </Link>
-            <Link href="#trading-tools" className="text-sm font-medium text-gray-300 hover:text-white transition">
-              Trading Tools
-            </Link>
-            <Link href="#challenges" className="text-sm font-medium text-gray-300 hover:text-white transition">
-              Challenges
-            </Link>
-            <Link href="#how-it-works" className="text-sm font-medium text-gray-300 hover:text-white transition">
-              How It Works
-            </Link>
-            <Link
-              href="https://funded.help.bluewhalemarkets.com/"
-              className="text-sm font-medium text-gray-300 hover:text-white transition"
-            >
-              FAQ
-            </Link>
-          </div>
+        {/* Menú compacto */}
+        <nav className="hidden md:flex items-center space-x-4 mx-2">
+          <Link href="/" className="text-[11px] font-medium text-gray-300 hover:text-white transition-colors">
+            Home
+          </Link>
+          <Link href="#platform-preview" className="text-[11px] font-medium text-gray-300 hover:text-white transition-colors">
+            Platform
+          </Link>
+          <Link href="#trading-tools" className="text-[11px] font-medium text-gray-300 hover:text-white transition-colors">
+            Tools
+          </Link>
+          <Link href="#challenges" className="text-[11px] font-medium text-gray-300 hover:text-white transition-colors">
+            Challenges
+          </Link>
+          <Link href="#how-it-works" className="text-[11px] font-medium text-gray-300 hover:text-white transition-colors">
+            How To
+          </Link>
         </nav>
 
+        {/* Botón ultracompacto */}
         <Link 
           href="#get-started"
-          className="bg-transparent border border-gray-700 hover:border-gray-500 text-white rounded-full px-6 py-2.5 text-sm font-medium transition"
+          className="bg-transparent border border-gray-700 hover:border-gray-500 text-white rounded-full px-3 py-1 text-[11px] font-medium transition-colors"
         >
           Get Funded
         </Link>
       </div>
     </header>
-  )
+  );
 }

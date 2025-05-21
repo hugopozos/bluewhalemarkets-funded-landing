@@ -8,6 +8,7 @@ html, body {
 }
 
 body {
+
   font-family: "Manrope", sans-serif;
 }
 
@@ -100,4 +101,51 @@ html {
 
 body {
   overscroll-behavior: none;
+}
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(400px) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(400px) rotate(-360deg);
+  }
+}
+.home{
+  background-color: rgb(0, 0, 0);
+  
+}
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+  transform-origin: center;
+}
+
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+@keyframes gradient-slide {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-gradient-slide {
+  animation: gradient-slide 10s ease-in-out infinite;
+  background-size: 200% 100%;
 }

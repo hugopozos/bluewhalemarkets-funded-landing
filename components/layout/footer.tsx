@@ -114,7 +114,7 @@ export default function Footer() {
               <li>
                 <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center gap-2">
                   <Mail className="h-4 w-4 text-[#B5946E]/70" />
-                  support@bluewhale.com
+                  funded@bluewhalemarkets.com
                 </Link>
               </li>
               <li>

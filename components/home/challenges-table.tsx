@@ -6,6 +6,7 @@ import Image from "next/image"
 
 // Define las opciones de financiación
 const fundingOptions = [
+  { value: 5000, label: "$5K" },
   { value: 10000, label: "$10K" },
   { value: 25000, label: "$25K" },
   { value: 50000, label: "$50K" },
@@ -15,32 +16,32 @@ const fundingOptions = [
 
 // Define los tipos de desafío
 const challengeTypes = [
-  { id: "standard", name: "Standard" },
-  { id: "express", name: "Express" },
-  { id: "pro", name: "Pro" },
+  { id: "standard", name: "One Step" },
+  { id: "express", name: "Two Step" },
+  // { id: "pro", name: "Pro" },
 ]
 
 // Define las características del plan para cada tipo de desafío
 const planFeatures = {
   standard: [
-    { name: "Profit Target", value: "8%" },
-    { name: "Daily Drawdown", value: "5%" },
-    { name: "Max Drawdown", value: "10%" },
-    { name: "Min Trading Days", value: "10 days" },
+    { name: "Profit Target", value: "6%" },
+    { name: "Daily Drawdown", value: "4%" },
+    { name: "Max Drawdown", value: "9%" },
+    { name: "Min Trading Days", value: "5 days" },
     { name: "Profit Split", value: "Up to 90%" },
   ],
   express: [
-    { name: "Profit Target", value: "12%" },
-    { name: "Daily Drawdown", value: "6%" },
-    { name: "Max Drawdown", value: "12%" },
+    { name: "Profit Target", value: "6%" },
+    { name: "Daily Drawdown", value: "4%" },
+    { name: "Max Drawdown", value: "9%" },
     { name: "Min Trading Days", value: "5 days" },
     { name: "Profit Split", value: "Up to 80%" },
   ],
   pro: [
-    { name: "Profit Target", value: "10%" },
+    { name: "Profit Target", value: "9%" },
     { name: "Daily Drawdown", value: "4%" },
     { name: "Max Drawdown", value: "8%" },
-    { name: "Min Trading Days", value: "15 days" },
+    { name: "Min Trading Days", value: "5 days" },
     { name: "Profit Split", value: "Up to 95%" },
   ],
 }
@@ -107,7 +108,8 @@ export default function ChallengesTable() {
   const price = pricing[selectedChallenge as keyof typeof pricing][selectedAmount as keyof (typeof pricing)["standard"]]
 
   return (
-    <section className="py-24 bg-black relative">
+    <section className="py-24 relative">
+      
       {/* Fondo con efecto de puntos */}
       <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"></div>
 

@@ -55,48 +55,48 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       quote:
-        "I've increased my trading consistency by 40%. The advanced risk management tools allow me to focus on strategy instead of calculations. It's like having a professional risk manager working 24/7.",
-      name: "Alex M.",
+        "Quiero recomendar ampliamente Blue Whale Markets Funded, ya que es mi tercer retiro que realizo, y no he tenido ningún problema con alguno, es fácil si sigues las reglas al pie de la letra, en total he retirado cerca de los $4,000 USD. Excelente atención de soporte, reglas justas. Gracias por la oportunidad.",
+      name: "Karla Robles",
       title: "Full-time Forex Trader",
-      image: "/confident-market-analyst.png",
+      image: "https://user-images.trustpilot.com/6708847e4448ddad3b63d2ce/73x73.png",
       rating: 5,
-      date: "2 weeks ago",
+      date: "21 minutes ago",
     },
     {
       quote:
-        "Exceptional trader support. They seamlessly integrated with my existing trading platforms, impressing me with their in-depth knowledge and ability to customize solutions. The evaluation process was smooth, and they've been responsive to every query.",
-      name: "Michael R.",
+        "Quede en 2do lugar en su competencia y también he operado con sus cuentas de fondeo. Solo tengo cosas positivas que decir sobre esta empresa. Tienen muy buenas condiciones y reglas claras para operar, además sus competencias te dan gran oportunidad para crecer.",
+      name: "Carlos Castro Solis",
       title: "Institutional Trader",
-      image: "/confident-businessman.png",
+      image: "https://user-images.trustpilot.com/664e12d6d11b294e3f2b5614/73x73.png",
       rating: 5,
-      date: "1 month ago",
+      date: "Feb 19, 2025",
     },
     {
       quote:
-        "As a part-time trader, I found it surprisingly user-friendly. The platform optimized my trade management and performance tracking. The payout process is seamless and always on time.",
-      name: "Sarah J.",
+        "Muy feliz con sus servicios de fondeo , educación y atención de sus colaboradores. Después de tanto tiempo y de pasar por muchas estafas con empresa de fondeo. Hoy encontré una empresa de fondeo que si paga. Estoy contento y agradecido con Clubprotraders por valorar mi esfuerzo y haberme pagado mi primer retiro. Altamente recomendados sus servicios.",
+      name: "Wilson Antonio",
       title: "Part-time Trader",
       image: "/confident-market-analyst.png",
-      rating: 4,
+      rating: 5,
       date: "2 months ago",
     },
     {
       quote:
-        "The intuitive dashboard makes advanced trading metrics accessible to our entire team, transforming our analysis. We're making data-driven trading decisions faster, with a real impact on our bottom line.",
-      name: "Jennifer L.",
+        "hice un 7% en un mes, está mas que perfecto un buen trader no mete 15 operaciones diarias . divide su riesgo quizás en 2 o 3 operaciones como mucho por dia siempre y cuando se de la estrategia , y respetes el riesgo, aqui si te sobreloteas, sobreoperas y no sigues tu plan estás realmente apostando,aquí buscan solidez y aqui me quedo y pensar a largo plazo, las reglas están claras toca ponerse serio. Estamos mal acostumbrados a empresas de mentiras donde la consistencia no se premia",
+      name: "AlikÄ",
       title: "Trading Team Lead",
       image: "/confident-executive.png",
-      rating: 5,
-      date: "3 weeks ago",
+      rating: 4,
+      date: "Feb 18, 2025",
     },
     {
       quote:
-        "After trying several prop firms, this is by far the best. The capital allocation is generous, the rules are fair, and the scaling opportunities are unmatched in the industry.",
-      name: "David K.",
+        "Estoy muy contenta con esta empresa muy confiable solo puedo decir cosas positivas, apégate a las reglas y estás del otro lado, todo bien estoy muy feliz de haber encontrado todo aquí no solo te fondean entras a una comunidad donde compartimos nuestros análisis y nos apoyamos aunado a esto el apoyo de los asesores está increíble.",
+      name: "Gloria Ramirez",
       title: "Futures Trader",
       image: "/confident-professional.png",
-      rating: 4,
-      date: "5 days ago",
+      rating: 5,
+      date: "May 12, 2025",
     },
   ]
 
@@ -124,7 +124,7 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section className="py-24 bg-black relative">
+    <section className="py-24 relative">
       {/* Fondo con efecto de puntos */}
       <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"></div>
 
@@ -172,12 +172,19 @@ export default function TestimonialsSection() {
         {/* Trustpilot-style Header */}
         <div className="flex justify-between items-center mb-8">
           <div className="flex items-center gap-2">
+          <a
+            href="https://www.trustpilot.com/review/clubprotraders.com?starts=5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 cursor-pointer"
+          >
             <div className="w-5 h-5 bg-[#00b67a] flex items-center justify-center">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" />
               </svg>
             </div>
             <span className="font-medium text-lg">Trustpilot</span>
+            </a>
           </div>
           <div className="flex items-center gap-1">
             <div className="text-sm font-medium">Excellent</div>
@@ -194,10 +201,18 @@ export default function TestimonialsSection() {
 
           <div ref={containerRef} className="flex overflow-x-hidden gap-5 pb-8 scrollbar-hide">
             {allTestimonials.map((testimonial, index) => (
+                <a
+                key={`${testimonial.name}-${index}`}
+                href="https://www.trustpilot.com/review/clubprotraders.com?starts=5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="min-w-[320px] max-w-[320px] bg-gradient-to-br from-black to-[#080816] border border-gray-800 rounded-xl p-5 flex flex-col hover:brightness-110 transition-all duration-300"
+              >
               <div
                 key={`${testimonial.name}-${index}`}
                 className="min-w-[320px] max-w-[320px] bg-gradient-to-br from-black to-[#080816] border border-gray-800 rounded-xl p-5 flex flex-col"
               >
+                
                 {/* Trustpilot-style rating */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex">
@@ -224,7 +239,9 @@ export default function TestimonialsSection() {
                     <div className="text-xs text-gray-400">{testimonial.title}</div>
                   </div>
                 </div>
+        
               </div>
+              </a>
             ))}
           </div>
 

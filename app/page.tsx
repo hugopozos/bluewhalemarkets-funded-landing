@@ -1,3 +1,4 @@
+'use client'
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
 import FramerBadge from "@/components/ui/framer-badge"
@@ -9,14 +10,48 @@ import SmoothScrollLinks from "@/components/smooth-scroll-links"
 import HeroSection from "@/components/home/hero-section"
 import ChallengesTable from "@/components/home/challenges-table"
 import HeroDashboardPreview from "@/components/home/hero-dashboard-preview"
+import { useScroll, useTransform, motion } from "framer-motion";
+import { useRef, useLayoutEffect, useState, useMemo , useEffect } from "react";
 
+const NUM_PROTONES = 24;
 export default function Home() {
+  const mainRef = useRef<HTMLElement | null>(null);
+  const [mainHeight, setMainHeight] = useState(0);
+  const beams = Array.from({ length: 12 });
+  useLayoutEffect(() => {
+    if (mainRef.current) {
+      console.log("Main ref height:", mainRef.current.clientHeight);
+      setMainHeight(mainRef.current.clientHeight);
+    }
+  }, []);
+
+  const protonConfigs = useMemo(() => {
+    const containerWidth = mainRef.current?.clientWidth || window.innerWidth;
+    const containerHeight = mainRef.current?.clientHeight || window.innerHeight;
+  
+    return Array.from({ length: NUM_PROTONES }).map(() => {
+      const orbitRadius = 200 + Math.random() * 300; 
+      const size = 150 + Math.random() * 300; 
+      const duration = 10 + Math.random() * 15;
+      const startAngle = Math.random() * 360;
+  
+      const centerX = Math.random() * containerWidth;
+      const centerY = Math.random() * containerHeight;
+  
+      const steps = 120;
+      const angles = Array.from({ length: steps }, (_, idx) =>
+        (startAngle + (360 / steps) * idx) * (Math.PI / 180)
+      );
+      const xs = angles.map((a) => centerX + orbitRadius * Math.cos(a));
+      const ys = angles.map((a) => centerY + orbitRadius * Math.sin(a));
+  
+      return { xs, ys, size, duration };
+    });
+  }, [mainHeight]);
+  
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      {/* Componente para manejar el scroll suave en enlaces internos */}
       <SmoothScrollLinks />
-
-      {/* Background grid pattern with gradient */}
       <div
         className="absolute inset-0 z-0 bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-20"
         style={{
@@ -25,17 +60,46 @@ export default function Home() {
           backgroundSize: "20px 20px",
         }}
       />
-
-      {/* Navigation */}
       <Navbar />
+     <main ref={mainRef} className="relative z-10 flex-grow home">
+  <section className="relative z-10">
+    <HeroSection />
+  </section>
 
-      {/* Main Content */}
-      <main className="relative z-10 flex-grow">
-        {/* Hero Section con Dashboard y Video de Fondo */}
-        <HeroSection />
+ {mainHeight > 0 && (
+  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+ {protonConfigs.map((config, i) => (
+  <motion.div
+    key={`proton-${i}`}
+    animate={{ x: config.xs, y: config.ys }}
+    transition={{
+      x: { repeat: Infinity, repeatType: "loop", duration: config.duration, ease: "linear" },
+      y: { repeat: Infinity, repeatType: "loop", duration: config.duration, ease: "linear" },
+    }}
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: config.size,
+      height: config.size,
+      borderRadius: "50%",
+      background: "radial-gradient(circle at center, rgba(0,140,255,0.6), rgba(0, 255, 217, 0.3), transparent 80%)",
+      filter: "blur(50px)",
+      opacity: 0.75,
+      pointerEvents: "none",
+      zIndex: 0,
+    }}
+  />
+))}
+
+</div>
+
+)}
+
+
 
         {/* Dashboard Preview Section */}
-        <section id="platform-preview" className="py-24 bg-black relative">
+        <section id="platform-preview" className="py-24 relative">
           {/* Fondo con efecto de puntos */}
           <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"></div>
           
