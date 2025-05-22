@@ -58,13 +58,15 @@ export default function HowItWorksSection() {
 
         <div className="flex justify-center relative z-20 w-full max-w-3xl mx-auto">
           {!isOpen && (
-            <button
-              onClick={handleButtonClick}
-             className="relative inline-block px-8 py-4 text-lg font-medium text-white border border-gray-700 rounded-lg overflow-hidden group hover:text-blue-400 transition w-auto text-center"
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 animate-glow blur-lg" />
-              <span className="relative z-10">Ver video</span>
-            </button>
+               <button 
+               onClick={handleButtonClick}
+               className="relative w-44 py-3 px-5 rounded-full font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group text-base">
+               <span className="absolute inset-0 rounded-full bg-[conic-gradient(at_center,_#ffffff33,_#ffffff99,_#ffffff33)] animate-spin-slow blur-sm opacity-40 group-hover:opacity-70 z-0"></span>
+               <span className="absolute inset-[2px] bg-[#0a0a0a] rounded-full z-0"></span>
+               <span className="relative z-10">
+               <span className="relative z-10">Ver video</span>
+               </span>
+             </button>
           )}
 
           {isOpen && (

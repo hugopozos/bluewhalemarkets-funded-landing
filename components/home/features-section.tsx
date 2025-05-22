@@ -75,11 +75,13 @@ export default function FeaturesSection() {
           {/* Feature Card 1 - Discord Community */}
           <div
             ref={(el) => setCardRef(el, 0)}
-            className="bg-gradient-to-br from-black to-[#0F2A38] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[500px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
+            className="bg-gradient-to-r from-black to-[#0F2A38] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
 
           >
-            {/* Efecto de resplandor Discord */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#1F485E]/10 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
+             <div className="absolute -inset-[1px] before:absolute before:inset-0 before:rounded-2xl before:bg-[conic-gradient(from_0deg_at_50%_50%,#00ffff33,#00000000_30%,#00ffff33)] before:animate-spin-slow before:opacity-30 pointer-events-none z-0"></div>
+
+          {/* Fondo de puntos muy sutil */}
+          <div className="absolute inset-0 bg-[radial-gradient(#ffffff22_1px,transparent_1px)] bg-[size:20px_20px] opacity-5 pointer-events-none z-0"></div>
 
             <div className="flex justify-center mb-4">
               <div className="relative h-12 w-12">
@@ -97,16 +99,15 @@ export default function FeaturesSection() {
               Join our exclusive Discord community where traders share insights, strategies, and support each other on their trading journey.
             </p>
 
-            <div className="flex flex-col items-center relative z-10">
-              <div className="w-10 h-10 rounded-lg bg-[#111] border border-gray-800 flex items-center justify-center mb-6 relative">
+            <div className="mt-9 flex flex-col items-center relative z-10">
+              {/* <div className="w-10 h-10 rounded-lg bg-[#111] border border-gray-800 flex items-center justify-center mb-6 relative">
                 <div className="w-5 h-5 rounded-sm bg-indigo-500/20 flex items-center justify-center">
                   <MessagesSquare className="w-3 h-3 text-indigo-500" />
                 </div>
-                {/* Línea conectora */}
                 <div className="absolute h-6 w-0.5 bg-gradient-to-b from-[#1F485E]/40 to-transparent -bottom-6"></div>
-              </div>
+              </div> */}
 
-              <button 
+              {/* <button 
                 onClick={() => setShowInfo(!showInfo)}
                 className="relative w-64 py-3 px-6 rounded-xl font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group"
               >
@@ -115,7 +116,18 @@ export default function FeaturesSection() {
                 <span className="relative z-10">
                   {showInfo ? "Ocultar detalles" : "Ver Más"}
                 </span>
-              </button>
+              </button> */}
+
+              <button 
+            onClick={() => setShowInfo(!showInfo)}
+            className="relative w-44 py-3 px-5 rounded-full font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group text-base"
+          >
+            <span className="absolute inset-0 rounded-full bg-[conic-gradient(at_center,_#ffffff33,_#ffffff99,_#ffffff33)] animate-spin-slow blur-sm opacity-40 group-hover:opacity-70 z-0"></span>
+            <span className="absolute inset-[2px] bg-[#0a0a0a] rounded-full z-0"></span>
+            <span className="relative z-10">
+              {showInfo ? "Ocultar" : "Ver Más"}
+            </span>
+          </button>
 
 
 
@@ -157,12 +169,25 @@ export default function FeaturesSection() {
           <div
             ref={(el) => setCardRef(el, 1)}
 
-            className="bg-gradient-to-br from-black to-[#634F36] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[500px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
+            className="bg-gradient-to-r from-black to-[#634F36] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
 
           >
-            {/* Efecto de resplandor dorado */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#B5946E]/10 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
+              <div className="absolute -inset-[1px] before:absolute before:inset-0 before:rounded-2xl before:bg-[conic-gradient(from_0deg_at_50%_50%,#00ffff33,#00000000_30%,#00ffff33)] before:animate-spin-slow before:opacity-30 pointer-events-none z-0"></div>
 
+              <div className="absolute inset-0 bg-[radial-gradient(#b5946e22_1px,transparent_1px)] bg-[size:20px_20px] opacity-5 pointer-events-none z-0"></div>
+
+ 
+              <div className="flex justify-center mb-4">
+                <div className="relative h-12 w-12">
+                  <Image 
+                    src="/images/support.png" 
+                    alt="Discord" 
+                    width={48} 
+                    height={48} 
+                    className="object-contain invert"
+                  />
+                </div>
+              </div>
             <h3 className="text-xl font-medium mb-3 text-center">24/5 Dedicated Support</h3>
             <p className="text-gray-400 text-center text-sm mb-14">
               Get professional assistance whenever you need it with our round-the-clock support team, available throughout the trading week.
@@ -170,25 +195,26 @@ export default function FeaturesSection() {
 
               
             <div className="mt-7 flex flex-col items-center relative z-10">
-              <div className="w-10 h-10 rounded-lg bg-[#111] border border-gray-800 flex items-center justify-center mb-6 relative">
+              {/* <div className="w-10 h-10 rounded-lg bg-[#111] border border-gray-800 flex items-center justify-center mb-6 relative">
                 <div className="w-5 h-5 rounded-sm bg-[#B5946E]/10 flex items-center justify-center">
                   <Clock className="w-3 h-3 text-[#B5946E]/80" />
                 </div>
-                {/* Línea conectora */}
+               
                 <div className="absolute h-6 w-0.5 bg-gradient-to-b from-[#B5946E]/30 to-transparent -bottom-6"></div>
-              </div>
+              </div> */}
 
    
-            <button 
-                onClick={() => setShowInfoOne(!showInfoOne)}
-                className="relative w-64 py-3 px-6 rounded-xl font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group"
-              >
-                <span className="absolute inset-0 bg-[conic-gradient(at_top_left,_#ffffff99,_#ffffff33,_#ffffff99)] animate-spin-slow blur-md opacity-40 group-hover:opacity-70 rounded-xl"></span>
-                <span className="absolute inset-[2px] bg-[rgb(0, 0, 0)] rounded-xl z-0"></span>
-                <span className="relative z-10">
-                  {showInfoOne ? "Ocultar detalles" : "Ver Más"}
-                </span>
-              </button>
+          <button 
+            onClick={() => setShowInfoOne(!showInfoOne)}
+            className="relative w-44 py-3 px-5 rounded-full font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group text-base"
+          >
+            <span className="absolute inset-0 rounded-full bg-[conic-gradient(at_center,_#ffffff33,_#ffffff99,_#ffffff33)] animate-spin-slow blur-sm opacity-40 group-hover:opacity-70 z-0"></span>
+            <span className="absolute inset-[2px] bg-[#0a0a0a] rounded-full z-0"></span>
+            <span className="relative z-10">
+              {showInfoOne ? "Ocultar" : "Ver Más"}
+            </span>
+          </button>
+
 
 
          {showInfoOne && (
@@ -249,10 +275,12 @@ export default function FeaturesSection() {
           {/* Feature Card 3 - Broker Information */}
           <div
             ref={(el) => setCardRef(el, 2)}
-            className="bg-gradient-to-br from-black to-[#0F2A38] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[500px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
+            className="bg-gradient-to-r from-black to-[#0F2A38] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
 
            
           >
+             <div className="absolute -inset-[1px] before:absolute before:inset-0 before:rounded-2xl before:bg-[conic-gradient(from_0deg_at_50%_50%,#00ffff33,#00000000_30%,#00ffff33)] before:animate-spin-slow before:opacity-30 pointer-events-none z-0"></div>
+
             {/* Efecto de resplandor azul */}
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#1F485E]/10 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
 
@@ -270,7 +298,7 @@ export default function FeaturesSection() {
               Trade with confidence knowing your funds are secure with our regulated broker partners, offering competitive spreads and fast execution.
             </p>
             <div className="mt-7 flex flex-col items-center relative z-10">
-            <button 
+            {/* <button 
                 onClick={() => setShowReliable(!showreliable)}
                 className="relative w-64 py-3 px-6 rounded-xl font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group"
               >
@@ -279,9 +307,9 @@ export default function FeaturesSection() {
                 <span className="relative z-10">
                   {showreliable ? "Ocultar detalles" : "Ver Más"}
                 </span>
-              </button>
+              </button> */}
               </div>
-              {showreliable && (
+              {/* {showreliable && (
               <div className="mt-auto relative z-10">
                 <div className="flex justify-between mb-4 px-2">
                   <div className="text-center">
@@ -312,18 +340,20 @@ export default function FeaturesSection() {
                   </div>
                 </div>
               </div> 
-              )}
+              )} */}
           </div>
 
           {/* Feature Card 4 - MT5 Platform */}
           <div
             ref={(el) => setCardRef(el, 3)}
            
-            className="bg-gradient-to-br from-black to-[#634F36] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[500px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
+            className="bg-gradient-to-r from-black to-[#634F36] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
 
           >
+             <div className="absolute -inset-[1px] before:absolute before:inset-0 before:rounded-2xl before:bg-[conic-gradient(from_0deg_at_50%_50%,#00ffff33,#00000000_30%,#00ffff33)] before:animate-spin-slow before:opacity-30 pointer-events-none z-0"></div>
+
             {/* Efecto de resplandor dorado */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#B5946E]/10 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#1f2d45]/5 blur-[8rem] rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-1500"></div>
 
             <div className="flex justify-center mb-6">
               <Image 
@@ -339,7 +369,7 @@ export default function FeaturesSection() {
             The most powerful version of MetaTrader. Improve your trading style with advanced customization. You can access over 400 different CFDs in seconds and trade forex, indices, stocks, precious metals, commodities, bonds, and futures easily and quickly.
             </p>
             <div className="mt-7 flex flex-col items-center relative z-10">
-            <button 
+            {/* <button 
                 onClick={() => setShowMetatrader(!showMetatrader)}
                 className="relative w-64 py-3 px-6 rounded-xl font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group"
               >
@@ -348,9 +378,9 @@ export default function FeaturesSection() {
                 <span className="relative z-10">
                   {showreliable ? "Ocultar detalles" : "Ver Más"}
                 </span>
-              </button>
+              </button> */}
             </div>
-            {showreliable && (
+            {/* {showreliable && (
             <div className="mt-auto relative z-10">
               <div className="flex items-start gap-2 mb-3">
                 <div className="min-w-5 h-5 rounded-full bg-[#B5946E]/10 flex items-center justify-center mt-0.5">
@@ -378,7 +408,7 @@ export default function FeaturesSection() {
                 </div>
               </div>
             </div>
-            )}
+            )} */}
           </div>
         </div>
       </div>

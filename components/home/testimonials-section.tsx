@@ -57,7 +57,7 @@ export default function TestimonialsSection() {
       quote:
         "Quiero recomendar ampliamente Blue Whale Markets Funded, ya que es mi tercer retiro que realizo, y no he tenido ningún problema con alguno, es fácil si sigues las reglas al pie de la letra, en total he retirado cerca de los $4,000 USD. Excelente atención de soporte, reglas justas. Gracias por la oportunidad.",
       name: "Karla Robles",
-      title: "Full-time Forex Trader",
+      title: "",
       image: "https://user-images.trustpilot.com/6708847e4448ddad3b63d2ce/73x73.png",
       rating: 5,
       date: "21 minutes ago",
@@ -66,7 +66,7 @@ export default function TestimonialsSection() {
       quote:
         "Quede en 2do lugar en su competencia y también he operado con sus cuentas de fondeo. Solo tengo cosas positivas que decir sobre esta empresa. Tienen muy buenas condiciones y reglas claras para operar, además sus competencias te dan gran oportunidad para crecer.",
       name: "Carlos Castro Solis",
-      title: "Institutional Trader",
+      title: "",
       image: "https://user-images.trustpilot.com/664e12d6d11b294e3f2b5614/73x73.png",
       rating: 5,
       date: "Feb 19, 2025",
@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
       quote:
         "Muy feliz con sus servicios de fondeo , educación y atención de sus colaboradores. Después de tanto tiempo y de pasar por muchas estafas con empresa de fondeo. Hoy encontré una empresa de fondeo que si paga. Estoy contento y agradecido con Clubprotraders por valorar mi esfuerzo y haberme pagado mi primer retiro. Altamente recomendados sus servicios.",
       name: "Wilson Antonio",
-      title: "Part-time Trader",
+      title: "",
       image: "/confident-market-analyst.png",
       rating: 5,
       date: "2 months ago",
@@ -84,7 +84,7 @@ export default function TestimonialsSection() {
       quote:
         "hice un 7% en un mes, está mas que perfecto un buen trader no mete 15 operaciones diarias . divide su riesgo quizás en 2 o 3 operaciones como mucho por dia siempre y cuando se de la estrategia , y respetes el riesgo, aqui si te sobreloteas, sobreoperas y no sigues tu plan estás realmente apostando,aquí buscan solidez y aqui me quedo y pensar a largo plazo, las reglas están claras toca ponerse serio. Estamos mal acostumbrados a empresas de mentiras donde la consistencia no se premia",
       name: "AlikÄ",
-      title: "Trading Team Lead",
+      title: "",
       image: "/confident-executive.png",
       rating: 4,
       date: "Feb 18, 2025",
@@ -93,8 +93,8 @@ export default function TestimonialsSection() {
       quote:
         "Estoy muy contenta con esta empresa muy confiable solo puedo decir cosas positivas, apégate a las reglas y estás del otro lado, todo bien estoy muy feliz de haber encontrado todo aquí no solo te fondean entras a una comunidad donde compartimos nuestros análisis y nos apoyamos aunado a esto el apoyo de los asesores está increíble.",
       name: "Gloria Ramirez",
-      title: "Futures Trader",
-      image: "/confident-professional.png",
+      title: "",
+      image: "/jhuli.jpg",
       rating: 5,
       date: "May 12, 2025",
     },

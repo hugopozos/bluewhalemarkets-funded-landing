@@ -49,6 +49,7 @@ const planFeatures = {
 // Define los precios para cada tipo de desafío y monto de financiación
 const pricing = {
   standard: {
+    5000: 55,
     10000: 99,
     25000: 199,
     50000: 299,
@@ -56,6 +57,7 @@ const pricing = {
     200000: 999,
   },
   express: {
+    5000: 83,
     10000: 149,
     25000: 249,
     50000: 399,
@@ -63,6 +65,7 @@ const pricing = {
     200000: 1199,
   },
   pro: {
+    5000: 83,
     10000: 199,
     25000: 299,
     50000: 499,
@@ -77,16 +80,19 @@ const planDescriptions = {
     title: "Standard Challenge",
     description: "Balance between requirements and profit potential",
     tag: "Most Popular",
+    offer: "",
   },
   express: {
     title: "Express Challenge",
     description: "Faster evaluation with higher profit targets",
     tag: "Fast Track",
+    offer: "(Phase One and Phase Two)",
   },
   pro: {
     title: "Professional Challenge",
     description: "Higher profit split with stringent requirements",
     tag: "For Experts",
+    offer: "",
   },
 }
 
@@ -191,10 +197,10 @@ export default function ChallengesTable() {
                 </button>
               </div>
 
-              <div className="mt-auto">
+              {/* <div className="mt-auto">
                 <div className="text-xs text-gray-400 mb-2">Account Size</div>
                 <div className="text-2xl font-medium">${selectedAmount.toLocaleString()}</div>
-              </div>
+              </div> */}
             </div>
 
             {/* Columna derecha - Características del plan */}
@@ -202,7 +208,7 @@ export default function ChallengesTable() {
               <div className="mb-8">
                 <h3 className="text-lg font-medium mb-6 flex items-center">
                   <span className="h-2 w-2 bg-gray-500 rounded-full mr-2"></span>
-                  Challenge Rules
+                  Challenge Rules   {planDescriptions[selectedChallenge as keyof typeof planDescriptions].offer}
                 </h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -223,10 +229,10 @@ export default function ChallengesTable() {
               <div>
                 <h3 className="text-lg font-medium mb-6 flex items-center">
                   <span className="h-2 w-2 bg-gray-500 rounded-full mr-2"></span>
-                  All Plans Include
+                  Weekend positions with add on Swing Trading (+15%)
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {globalFeatures.map((feature, index) => (
                     <div key={index} className="flex items-center">
                       <Check className="w-4 h-4 text-gray-500 mr-2" />
@@ -234,7 +240,7 @@ export default function ChallengesTable() {
                       <span className="ml-auto text-xs text-gray-400">{feature.value}</span>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

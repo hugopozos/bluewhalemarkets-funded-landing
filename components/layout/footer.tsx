@@ -30,18 +30,18 @@ export default function Footer() {
             </p>
             
             <div className="flex items-center space-x-4 pt-2">
-              <Link href="#" className="text-gray-500 hover:text-[#B5946E] transition-colors duration-200">
+              {/* <Link href="#" className="text-gray-500 hover:text-[#B5946E] transition-colors duration-200">
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-gray-500 hover:text-[#B5946E] transition-colors duration-200">
                 <Twitter className="h-5 w-5" />
-              </Link>
+              </Link> */}
               <Link href="#" className="text-gray-500 hover:text-[#B5946E] transition-colors duration-200">
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-[#B5946E] transition-colors duration-200">
+              {/* <Link href="#" className="text-gray-500 hover:text-[#B5946E] transition-colors duration-200">
                 <Globe className="h-5 w-5" />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -117,12 +117,12 @@ export default function Footer() {
                   funded@bluewhalemarkets.com
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center gap-2">
                   <Phone className="h-4 w-4 text-[#B5946E]/70" />
                   +1 (555) 123-4567
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <div className="mt-4 p-3 bg-[#0F2A38]/30 border border-gray-800 rounded-lg">
                   <p className="text-gray-400 text-xs">Trading hours support</p>

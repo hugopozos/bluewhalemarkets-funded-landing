@@ -89,7 +89,7 @@ export default function Home() {
                   width: config.size,
                   height: config.size,
                   borderRadius: "50%",
-                  background: "radial-gradient(circle at center, rgba(0,140,255,0.6), rgba(0, 255, 217, 0.3), transparent 80%)",
+                  background: "radial-gradient(circle at center, #B5946E, #1F485E, transparent 80%)",
                   filter: "blur(50px)",
                   opacity: 0.75,
                   pointerEvents: "none",
