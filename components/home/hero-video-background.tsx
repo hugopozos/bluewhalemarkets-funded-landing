@@ -6,77 +6,47 @@ export default function HeroVideoBackground() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [hasInteracted, setHasInteracted] = useState(false)
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768)
     }
-    
+
     checkMobile()
     window.addEventListener('resize', checkMobile)
-
-    const handleInteraction = () => {
-      setHasInteracted(true)
-      if (videoRef.current && videoRef.current.paused) {
-        videoRef.current.play().catch(() => {})
-      }
-    }
-
-    const timer = setTimeout(() => {
-      setHasInteracted(true)
-    }, 800);
-
-    window.addEventListener('scroll', handleInteraction, { once: true })
-    window.addEventListener('click', handleInteraction, { once: true })
-
     return () => {
       window.removeEventListener('resize', checkMobile)
-      window.removeEventListener('scroll', handleInteraction)
-      window.removeEventListener('click', handleInteraction)
-      clearTimeout(timer)
     }
   }, [])
-
-  const handleVideoEnded = () => {
-    if (!videoRef.current) return
-    videoRef.current.pause()
-    videoRef.current.currentTime = 0.05 
-    videoRef.current.play().catch(() => {})
-  }
-
-  const loadVideo = () => {
-    if (isMobile || !hasInteracted) return null
-    
-    return (
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        playsInline
-        preload="metadata"
-        width="1280"
-        height="720"
-        disablePictureInPicture
-        disableRemotePlayback
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${isLoaded ? 'opacity-80' : 'opacity-0'}`}
-        style={{
-          filter: "brightness(0.6) saturate(1.1) contrast(1.1)",
-        }}
-        onLoadedData={() => setIsLoaded(true)}
-        onEnded={handleVideoEnded} 
-      >
-        <source src="/videos/video-hero.mp4" type="video/mp4" />
-      </video>
-    )
-  }
 
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
       <div 
         className={`absolute inset-0 bg-black/90 transition-opacity duration-500 ${isLoaded && !isMobile ? 'opacity-0' : 'opacity-100'}`}
       />
-      {loadVideo()}
+
+      {!isMobile && (
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          width="1280"
+          height="720"
+          disablePictureInPicture
+          disableRemotePlayback
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${isLoaded ? 'opacity-80' : 'opacity-0'}`}
+          style={{
+            filter: "brightness(0.6) saturate(1.1) contrast(1.1)",
+          }}
+          onLoadedData={() => setIsLoaded(true)}
+        >
+          <source src="/videos/video-hero.mp4" type="video/mp4" />
+        </video>
+      )}
+
       <div className="absolute inset-0 bg-blue-900/30 mix-blend-color"></div>
       <div className="absolute inset-0 bg-black/35"></div>
       <div className="absolute inset-0" 
