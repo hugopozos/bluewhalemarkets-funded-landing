@@ -12,6 +12,13 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 /* Utilidades básicas */
 @layer utilities {
   .text-balance {
