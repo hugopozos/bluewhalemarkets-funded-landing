@@ -60,7 +60,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-black text-white ">
 
    
-      <SmoothScrollLinks />
+     
       <div
         className="absolute inset-0 z-0 bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-20 " 
         style={{
