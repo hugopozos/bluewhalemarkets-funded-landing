@@ -22,10 +22,10 @@
     return (
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <div 
-          className={`absolute inset-0 bg-black/90 transition-opacity duration-500 ${isLoaded && !isMobile ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute inset-0 bg-black/90 transition-opacity duration-500 ${isLoaded ? 'opacity-0' : 'opacity-100'}`}
         />
 
-        {!isMobile && (
+        { (
           <video
             ref={videoRef}
             autoPlay
@@ -43,7 +43,7 @@
             }}
             onLoadedData={() => setIsLoaded(true)}
           >
-            <source src="/videos/video-hero.mp4" type="video/mp4" />
+           <source src="/videos/video-hero.webm" type="video/webm" />
           </video>
         )}
 

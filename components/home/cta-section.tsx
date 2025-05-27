@@ -14,8 +14,8 @@ export default function CTASection() {
           playsInline
           className="absolute w-full h-full object-cover"
         >
-          <source src="/videos/ocean01.mp4" type="video/mp4" />
-          <source src="/videos/ocean01.webm" type="video/webm" />
+          {/* <source src="/videos/ocean01.mp4" type="video/mp4" /> */}
+          <source src="/videos/video-footer.webm" type="video/webm" />
         </video>
         
         {/* Solo el gradiente superior */}

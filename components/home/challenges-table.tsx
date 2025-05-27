@@ -24,7 +24,7 @@ const challengeTypes = [
 // Define las características del plan para cada tipo de desafío
 const planFeatures = {
   standard: [
-    { name: "Profit Target", value: "6%" },
+    { name: "Profit Target", value: "8%" },
     { name: "Daily Drawdown", value: "4%" },
     { name: "Max Drawdown", value: "9%" },
     { name: "Min Trading Days", value: "5 days" },
@@ -35,7 +35,7 @@ const planFeatures = {
     { name: "Daily Drawdown", value: "4%" },
     { name: "Max Drawdown", value: "9%" },
     { name: "Min Trading Days", value: "5 days" },
-    { name: "Profit Split", value: "Up to 80%" },
+    { name: "Profit Split", value: "Up to 90%" },
   ],
   pro: [
     { name: "Profit Target", value: "9%" },
@@ -77,15 +77,15 @@ const pricing = {
 // Define las descripciones del plan
 const planDescriptions = {
   standard: {
-    title: "Standard Challenge",
+    title: "One Step",
     description: "Balance between requirements and profit potential",
     tag: "Most Popular",
     offer: "",
   },
   express: {
-    title: "Express Challenge",
+    title: "Two Step",
     description: "Faster evaluation with higher profit targets",
-    tag: "Fast Track",
+    tag: "",
     offer: "(Phase One and Phase Two)",
   },
   pro: {

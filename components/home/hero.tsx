@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="text-center max-w-4xl mx-auto">
+    <div className="text-center max-w-4xl mx-auto pt-48 md:pt-52">
       <h1 className="text-5xl md:text-7xl font-semibold mb-6 leading-tight">
         We Don't Fund Accounts.{" "}
         <span className="block mt-2">We Fund Talent.</span>

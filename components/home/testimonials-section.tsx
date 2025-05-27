@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState  } from "react"
 import { Star } from "lucide-react"
 import Image from "next/image"
 
@@ -28,6 +28,7 @@ export default function TestimonialsSection() {
       scrollContainer.scrollLeft = scrollPos
       animationFrameId = requestAnimationFrame(scroll)
     }
+   
 
     animationFrameId = requestAnimationFrame(scroll)
 
@@ -123,8 +124,9 @@ export default function TestimonialsSection() {
       ))
   }
 
+  const [expanded, setExpanded] = useState(false);
   return (
-    <section className="py-24 relative">
+    <section className="py-24 relative bg-black/1 backdrop-blur-sm rounded-xl">
       {/* Fondo con efecto de puntos */}
       <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"></div>
 
@@ -195,9 +197,9 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Testimonials Carousel con gradientes laterales */}
-        <div className="relative">
+        <div className="relative bg-black/6 backdrop-blur-md rounded-xl p-6">
           {/* Gradiente izquierdo */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-black to-transparent pointer-events-none"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-black/5 to-transparent pointer-events-none"></div>
 
           <div ref={containerRef} className="flex overflow-x-hidden gap-5 pb-8 scrollbar-hide">
             {allTestimonials.map((testimonial, index) => (
@@ -205,10 +207,12 @@ export default function TestimonialsSection() {
                 key={`${testimonial.name}-${index}`}
                 href="https://www.trustpilot.com/review/clubprotraders.com?starts=5"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                >
               <div
                 key={`${testimonial.name}-${index}`}
                 className="min-w-[320px] max-w-[320px] bg-gradient-to-br from-black to-[#080816] border border-gray-800 rounded-xl p-5 flex flex-col"
+                style={{ height: "300px" }}
               >
                 
                 {/* Trustpilot-style rating */}
@@ -221,7 +225,11 @@ export default function TestimonialsSection() {
 
                 {/* Contenido del testimonio */}
                 <div className="mb-6 flex-grow">
-                  <p className="text-gray-300 text-sm leading-relaxed">"{testimonial.quote}"</p>
+                <p
+            className={`text-gray-300 text-sm leading-relaxed ${
+              expanded ? "" : "line-clamp-4" /* muestra solo 4 líneas si no está expandido */}
+            `}
+          >"{testimonial.quote}"</p>
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -244,7 +252,7 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Gradiente derecho */}
-          <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-black/3 to-transparent pointer-events-none"></div>
         </div>
       </div>
     </section>

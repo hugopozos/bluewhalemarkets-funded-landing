@@ -75,7 +75,7 @@ export default function FeaturesSection() {
           {/* Feature Card 1 - Discord Community */}
           <div
             ref={(el) => setCardRef(el, 0)}
-            className="bg-gradient-to-r from-black to-[#0F2A38] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
+            className="bg-gradient-to-r from-black/60 to-[#0F2A38]/60 border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
 
           >
              <div className="absolute -inset-[1px] before:absolute before:inset-0 before:rounded-2xl before:bg-[conic-gradient(from_0deg_at_50%_50%,#00ffff33,#00000000_30%,#00ffff33)] before:animate-spin-slow before:opacity-30 pointer-events-none z-0"></div>
@@ -83,7 +83,7 @@ export default function FeaturesSection() {
           {/* Fondo de puntos muy sutil */}
           <div className="absolute inset-0 bg-[radial-gradient(#ffffff22_1px,transparent_1px)] bg-[size:20px_20px] opacity-5 pointer-events-none z-0"></div>
 
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center mb-4 relative z-10">
               <div className="relative h-12 w-12">
                 <Image 
                   src="/images/discord.png" 
@@ -94,8 +94,8 @@ export default function FeaturesSection() {
                 />
               </div>
             </div>
-            <h3 className="text-xl font-medium mb-3 text-center">Trading Community</h3>
-            <p className="text-gray-400 text-center text-sm mb-8">
+            <h3 className="text-xl font-medium mb-3 text-center relative z-10">Trading Community</h3>
+            <p className="text-gray-400 text-center text-sm mb-8 relative z-10">
               Join our exclusive Discord community where traders share insights, strategies, and support each other on their trading journey.
             </p>
 
@@ -169,7 +169,7 @@ export default function FeaturesSection() {
           <div
             ref={(el) => setCardRef(el, 1)}
 
-            className="bg-gradient-to-r from-black to-[#634F36] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
+            className="bg-gradient-to-r from-black/60 to-[#634F36]/60 border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
 
           >
               <div className="absolute -inset-[1px] before:absolute before:inset-0 before:rounded-2xl before:bg-[conic-gradient(from_0deg_at_50%_50%,#00ffff33,#00000000_30%,#00ffff33)] before:animate-spin-slow before:opacity-30 pointer-events-none z-0"></div>
@@ -275,7 +275,7 @@ export default function FeaturesSection() {
           {/* Feature Card 3 - Broker Information */}
           <div
             ref={(el) => setCardRef(el, 2)}
-            className="bg-gradient-to-r from-black to-[#0F2A38] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
+            className="bg-gradient-to-r from-black/60 to-[#0F2A38]/60 border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
 
            
           >
@@ -347,7 +347,7 @@ export default function FeaturesSection() {
           <div
             ref={(el) => setCardRef(el, 3)}
            
-            className="bg-gradient-to-r from-black to-[#634F36] border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
+            className="bg-gradient-to-r from-black/60 to-[#634F36]/60 border border-gray-800 rounded-xl p-6 flex flex-col relative overflow-hidden group min-h-[200px] h-auto transition-all duration-500 ease-in-out animate-subtle-gradient"
 
           >
              <div className="absolute -inset-[1px] before:absolute before:inset-0 before:rounded-2xl before:bg-[conic-gradient(from_0deg_at_50%_50%,#00ffff33,#00000000_30%,#00ffff33)] before:animate-spin-slow before:opacity-30 pointer-events-none z-0"></div>

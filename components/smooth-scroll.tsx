@@ -123,7 +123,8 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
         target = window.scrollY
         
         // Aplicar la interpolación para el efecto suave
-        current = current + (target - current) * ease
+        // current = current + (target - current) * ease
+        current = current + (target - current)
         
         // Aplicar la transformación al contenido
         if (Math.abs(target - current) > 0.1) {

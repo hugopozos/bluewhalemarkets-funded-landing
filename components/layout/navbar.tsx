@@ -24,7 +24,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center space-x-4 mx-2">
+        <nav className="hidden md:flex items-center space-x-10 mx-2">
           <Link href="/" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">Home</Link>
           <Link href="#platform-preview" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">Platform</Link>
           <Link href="#trading-tools" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">Tools</Link>
