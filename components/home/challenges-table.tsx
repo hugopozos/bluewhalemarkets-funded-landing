@@ -49,20 +49,20 @@ const planFeatures = {
 // Define los precios para cada tipo de desafío y monto de financiación
 const pricing = {
   standard: {
-    5000: 55,
-    10000: 99,
-    25000: 199,
-    50000: 299,
-    100000: 499,
-    200000: 999,
+    5000: 83,
+    10000: 164,
+    25000: 299,
+    50000: 524,
+    100000: 749,
+    200000: 1433,
   },
   express: {
-    5000: 83,
-    10000: 149,
-    25000: 249,
-    50000: 399,
-    100000: 599,
-    200000: 1199,
+    5000: 55,
+    10000: 109,
+    25000: 199,
+    50000: 349,
+    100000: 499,
+    200000: 955,
   },
   pro: {
     5000: 83,
@@ -78,13 +78,13 @@ const pricing = {
 const planDescriptions = {
   standard: {
     title: "One Step",
-    description: "Balance between requirements and profit potential",
+    description: "Faster evaluation with higher profit targets",
     tag: "Most Popular",
     offer: "",
   },
   express: {
     title: "Two Step",
-    description: "Faster evaluation with higher profit targets",
+    description: "Balance between requirements and profit potential",
     tag: "",
     offer: "(Phase One and Phase Two)",
   },

@@ -10,7 +10,7 @@ export default function HeroDashboardPreview() {
       {/* Imagen en lugar del dashboard */}
       <div className="bg-[#0A0A0A] border border-gray-800 rounded-lg overflow-hidden shadow-2xl relative z-10">
         <img
-          src="/logodashboard.png"
+          src="/logodashboard.jpeg"
           alt="Dashboard preview"
           className="w-full h-auto object-cover"
         />
