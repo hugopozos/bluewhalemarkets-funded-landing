@@ -157,11 +157,11 @@ body {
   background-size: 200% 100%;
 }
 
-/* Desactiva smooth scroll en todos los dispositivos */
-html, body {
+html, body, * {
   scroll-behavior: auto !important;
-  overscroll-behavior: none;
-  -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: auto !important;
+  overscroll-behavior: none !important;
+  touch-action: auto !important;
 }
 
 @media (max-width: 768px) {
