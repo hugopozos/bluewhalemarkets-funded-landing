@@ -156,3 +156,17 @@ body {
   animation: gradient-slide 10s ease-in-out infinite;
   background-size: 200% 100%;
 }
+
+/* Desactiva smooth scroll en todos los dispositivos */
+html, body {
+  scroll-behavior: auto !important;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    scroll-behavior: auto !important;
+    -webkit-overflow-scrolling: auto !important;
+  }
+}
