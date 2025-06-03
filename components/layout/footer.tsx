@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link"
 import Image from "next/image"
 import { Twitter, Linkedin, Instagram, Globe, Phone, Mail } from "lucide-react"
@@ -111,12 +113,16 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-medium mb-5 pb-2 border-b border-gray-800 inline-block">Contact</h3>
             <ul className="space-y-3">
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center gap-2">
-                  <Mail className="h-4 w-4 text-[#B5946E]/70" />
-                  funded@bluewhalemarkets.com
-                </Link>
-              </li>
+            <li>
+              <Link
+                href="mailto:funded@bluewhalemarkets.com"
+                className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center gap-2"
+              >
+                <Mail className="h-4 w-4 text-[#B5946E]/70" />
+                funded@bluewhalemarkets.com
+              </Link>
+            </li>
+
               {/* <li>
                 <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center gap-2">
                   <Phone className="h-4 w-4 text-[#B5946E]/70" />
@@ -138,13 +144,13 @@ export default function Footer() {
             <span className="text-[#B5946E]/70">Blue Whale Markets</span> © {new Date().getFullYear()} — Made with passion for traders worldwide
           </div>
           <div className="flex space-x-8">
-            <Link href="#" className="text-gray-500 hover:text-[#B5946E] text-xs transition-colors duration-200">
+            <Link href="https://www.bluewhalemarkets.com/legal/policy-privacy" className="text-gray-500 hover:text-[#B5946E] text-xs transition-colors duration-200">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-gray-500 hover:text-[#B5946E] text-xs transition-colors duration-200">
+            <Link href="https://www.bluewhalemarkets.com/legal/terms-conditions" className="text-gray-500 hover:text-[#B5946E] text-xs transition-colors duration-200">
               Terms of Service
             </Link>
-            <Link href="#" className="text-gray-500 hover:text-[#B5946E] text-xs transition-colors duration-200">
+            <Link href="https://www.bluewhalemarkets.com/legal/policy-cookies" className="text-gray-500 hover:text-[#B5946E] text-xs transition-colors duration-200">
               Cookie Policy
             </Link>
           </div>

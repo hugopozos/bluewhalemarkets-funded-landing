@@ -122,7 +122,9 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
         while (content.firstChild) {
           body.appendChild(content.firstChild)
         }
-        body.removeChild(wrapper)
+        if (body.contains(wrapper)) {
+          body.removeChild(wrapper)
+        }
         body.style.height = ""
       }
 

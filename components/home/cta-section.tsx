@@ -15,7 +15,7 @@ export default function CTASection() {
           className="absolute w-full h-full object-cover"
         >
           {/* <source src="/videos/ocean01.mp4" type="video/mp4" /> */}
-          <source src="/videos/video-footer.webm" type="video/webm" />
+          <source src="/videos/footer-final2.webm" type="video/webm" />
         </video>
         
         {/* Solo el gradiente superior */}
@@ -30,7 +30,7 @@ export default function CTASection() {
           hidden fees, transparent rules.
         </p>
         <Link
-          href="#"
+          href="https://funded.app.bluewhalemarkets.com/login"
           className="inline-flex items-center gap-2 bg-white text-black hover:bg-gray-100 rounded-full px-8 py-3 font-medium transition"
         >
           <span className="h-2 w-2 bg-black rounded-full"></span>

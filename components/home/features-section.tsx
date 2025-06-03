@@ -94,73 +94,25 @@ export default function FeaturesSection() {
                 />
               </div>
             </div>
-            <h3 className="text-xl font-medium mb-3 text-center relative z-10">Trading Community</h3>
+            <h3 className="text-xl font-medium mb-3 text-center relative z-10">Private Trading Community</h3>
             <p className="text-gray-400 text-center text-sm mb-8 relative z-10">
-              Join our exclusive Discord community where traders share insights, strategies, and support each other on their trading journey.
+            Join our exclusive Discord where serious traders exchange strategies, insights, and support every step of the way. Surround yourself with the kind of people who sharpen your mindset, and your results.
             </p>
 
             <div className="mt-9 flex flex-col items-center relative z-10">
-              {/* <div className="w-10 h-10 rounded-lg bg-[#111] border border-gray-800 flex items-center justify-center mb-6 relative">
-                <div className="w-5 h-5 rounded-sm bg-indigo-500/20 flex items-center justify-center">
-                  <MessagesSquare className="w-3 h-3 text-indigo-500" />
-                </div>
-                <div className="absolute h-6 w-0.5 bg-gradient-to-b from-[#1F485E]/40 to-transparent -bottom-6"></div>
-              </div> */}
-
-              {/* <button 
-                onClick={() => setShowInfo(!showInfo)}
-                className="relative w-64 py-3 px-6 rounded-xl font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group"
-              >
-                <span className="absolute inset-0 bg-[conic-gradient(at_top_left,_#ffffff99,_#ffffff33,_#ffffff99)] animate-spin-slow blur-md opacity-40 group-hover:opacity-70 rounded-xl"></span>
-                <span className="absolute inset-[2px] bg-[rgb(0, 0, 0)] rounded-xl z-0"></span>
-                <span className="relative z-10">
-                  {showInfo ? "Ocultar detalles" : "Ver Más"}
-                </span>
-              </button> */}
-
-              <button 
-            onClick={() => setShowInfo(!showInfo)}
-            className="relative w-44 py-3 px-5 rounded-full font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group text-base"
+             
+            <a
+            href="https://discord.gg/a2wRBcaT"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative w-44 py-3 px-5 rounded-full font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group text-base text-center"
           >
             <span className="absolute inset-0 rounded-full bg-[conic-gradient(at_center,_#ffffff33,_#ffffff99,_#ffffff33)] animate-spin-slow blur-sm opacity-40 group-hover:opacity-70 z-0"></span>
             <span className="absolute inset-[2px] bg-[#0a0a0a] rounded-full z-0"></span>
             <span className="relative z-10">
-              {showInfo ? "Ocultar" : "Ver Más"}
+              Únete a Discord
             </span>
-          </button>
-
-
-
-
-      {/* Contenido que se despliega */}
-      {showInfo && (
-        <div className="w-full bg-[#0A0A0A]/80 backdrop-blur-sm border border-gray-800 rounded-lg p-4 shadow-[0_0_15px_rgba(31,72,94,0.08)]">
-          <div className="flex items-start gap-2 mb-4">
-            <div className="min-w-6 h-6 rounded-full bg-indigo-500/10 flex items-center justify-center mt-1">
-              <span className="text-indigo-500 text-xs">🎮</span>
-            </div>
-            <div className="text-sm">Blue Whale Markets Community</div>
-          </div>
-
-          <div className="text-sm text-gray-300 mb-4 pl-8">Connect with 5,000+ traders worldwide</div>
-
-          <div className="flex gap-2 pl-8 mb-4">
-            <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-[#1F485E]/30 transition-colors">
-              Live analysis
-            </button>
-            <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-[#1F485E]/30 transition-colors">
-              Trading ideas
-            </button>
-          </div>
-
-          <div className="flex items-center justify-between pl-8 text-xs text-gray-500">
-            <div>Weekly webinars with top traders</div>
-            <div className="w-5 h-5 rounded-full bg-[#111] border border-gray-800 flex items-center justify-center">
-              <span>→</span>
-            </div>
-          </div>
-        </div>
-      )}
+          </a>
 
             </div>
           </div>
@@ -188,71 +140,22 @@ export default function FeaturesSection() {
                   />
                 </div>
               </div>
-            <h3 className="text-xl font-medium mb-3 text-center">24/5 Dedicated Support</h3>
+            <h3 className="text-xl font-medium mb-3 text-center">24/5 Human Support</h3>
             <p className="text-gray-400 text-center text-sm mb-14">
-              Get professional assistance whenever you need it with our round-the-clock support team, available throughout the trading week.
-            </p>
-
-              
+            Our expert team is available 24 hours a day, 5 days a week to answer, guide and resolve, fast. No bots. No delays. Just people who understand what trading under pressure really means
+            </p>              
             <div className="mt-7 flex flex-col items-center relative z-10">
-              {/* <div className="w-10 h-10 rounded-lg bg-[#111] border border-gray-800 flex items-center justify-center mb-6 relative">
-                <div className="w-5 h-5 rounded-sm bg-[#B5946E]/10 flex items-center justify-center">
-                  <Clock className="w-3 h-3 text-[#B5946E]/80" />
-                </div>
-               
-                <div className="absolute h-6 w-0.5 bg-gradient-to-b from-[#B5946E]/30 to-transparent -bottom-6"></div>
-              </div> */}
-
-   
-          <button 
-            onClick={() => setShowInfoOne(!showInfoOne)}
-            className="relative w-44 py-3 px-5 rounded-full font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group text-base"
-          >
-            <span className="absolute inset-0 rounded-full bg-[conic-gradient(at_center,_#ffffff33,_#ffffff99,_#ffffff33)] animate-spin-slow blur-sm opacity-40 group-hover:opacity-70 z-0"></span>
-            <span className="absolute inset-[2px] bg-[#0a0a0a] rounded-full z-0"></span>
-            <span className="relative z-10">
-              {showInfoOne ? "Ocultar" : "Ver Más"}
-            </span>
-          </button>
-
-
-
-         {showInfoOne && (
-              <div className="w-full bg-[#0A0A0A]/80 backdrop-blur-sm border border-gray-800 rounded-lg p-4 shadow-[0_0_15px_rgba(181,148,110,0.08)]">
-                <div className="bg-[#111] border border-gray-800 rounded-lg px-3 py-2 mb-4 flex items-center justify-between">
-                  <div className="flex items-center">
-                    <span className="text-xs text-gray-400">Average</span>
-                    <span className="text-xs text-[#B5946E]/90 mx-1">Response</span>
-                    <span className="text-xs text-gray-400">Time</span>
-                  </div>
-                  <div className="w-4 h-4 rounded-full bg-[#B5946E]/10 flex items-center justify-center">
-                    <span className="text-[#B5946E]/80 text-xs">✓</span>
-                  </div>
-                </div>
-
-                <div className="mb-3">
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="w-4 h-4 rounded-full bg-[#B5946E]/10 flex items-center justify-center">
-                      <span className="text-[#B5946E]/80 text-xs">✓</span>
-                    </div>
-                    <div className="text-xs text-gray-300">Support Channels</div>
-                  </div>
-                  <div className="text-xs text-gray-400 pl-6 mb-1">Email Support: Under 2 hours</div>
-                  <div className="text-xs text-gray-500 pl-6">• Live Chat: Instant response</div>
-                  <div className="text-xs text-gray-500 pl-6">• Phone Support: Available</div>
-                  <div className="text-xs text-gray-500 pl-6">• Ticket System: Priority handling</div>
-                </div>
-
-                <div className="flex gap-2 justify-center">
-                  <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-[#B5946E]/20 transition-colors">
-                    Contact Support
-                  </button>
-                  <button className="text-xs bg-[#111] border border-gray-800 rounded-full px-3 py-1 text-gray-400 hover:border-[#B5946E]/20 transition-colors">
-                    Help Center
-                  </button>
-                </div>
-              </div>
-                 )}
+              <a href="/contact">
+                <button
+                  className="relative w-44 py-3 px-5 rounded-full font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group text-base"
+                >
+                  <span className="absolute inset-0 rounded-full bg-[conic-gradient(at_center,_#ffffff33,_#ffffff99,_#ffffff33)] animate-spin-slow blur-sm opacity-40 group-hover:opacity-70 z-0"></span>
+                  <span className="absolute inset-[2px] bg-[#0a0a0a] rounded-full z-0"></span>
+                  <span className="relative z-10">
+                    Ver Más
+                  </span>
+                </button>
+              </a>
             </div>
             
           </div>
@@ -293,54 +196,14 @@ export default function FeaturesSection() {
                 className="object-contain h-[40px] w-auto"
               />
             </div>
-            <h3 className="text-2xl font-medium mb-3 text-center">Reliable Brokerage Partner</h3>
+            <h3 className="text-2xl font-medium mb-3 text-center">Trusted Brokerage Infrastructure</h3>
             <p className="text-gray-400 text-center text-sm mb-10">
-              Trade with confidence knowing your funds are secure with our regulated broker partners, offering competitive spreads and fast execution.
+              We’re not just another prop firm. We’re a broker, and this is the prop division of Blue Whale Markets. That means full control over our tech, our rules, and our ecosystem. It also means we can offer more than capital. We can offer a future. For those who prove it, there’s a real institutional path ahead.
             </p>
             <div className="mt-7 flex flex-col items-center relative z-10">
-            {/* <button 
-                onClick={() => setShowReliable(!showreliable)}
-                className="relative w-64 py-3 px-6 rounded-xl font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group"
-              >
-                <span className="absolute inset-0 bg-[conic-gradient(at_top_left,_#ffffff99,_#ffffff33,_#ffffff99)] animate-spin-slow blur-md opacity-40 group-hover:opacity-70 rounded-xl"></span>
-                <span className="absolute inset-[2px] bg-[rgb(0, 0, 0)] rounded-xl z-0"></span>
-                <span className="relative z-10">
-                  {showreliable ? "Ocultar detalles" : "Ver Más"}
-                </span>
-              </button> */}
+           
               </div>
-              {/* {showreliable && (
-              <div className="mt-auto relative z-10">
-                <div className="flex justify-between mb-4 px-2">
-                  <div className="text-center">
-                    <div className="text-xs text-gray-400">Regulated</div>
-                    <div className="text-sm font-medium">Secure</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xs text-gray-400">Accounts</div>
-                    <div className="text-sm font-medium">Multiple</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xs text-gray-400">Execution</div>
-                    <div className="text-sm font-medium">Fast</div>
-                  </div>
-                </div>
-
-                <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2 mb-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-1 h-4 bg-[#1F485E]/70 rounded-full"></div>
-                    <div className="text-xs">Tight spreads starting from 0.0 pips</div>
-                  </div>
-                </div>
-
-                <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-1 h-4 bg-[#1F485E]/70 rounded-full"></div>
-                    <div className="text-xs">Advanced risk management tools</div>
-                  </div>
-                </div>
-              </div> 
-              )} */}
+             
           </div>
 
           {/* Feature Card 4 - MT5 Platform */}
@@ -364,51 +227,13 @@ export default function FeaturesSection() {
                 className="object-contain h-[50px] w-auto"
               />
             </div>
-            <h3 className="text-2xl font-medium mb-3 text-center">MetaTrader 5 Platform</h3>
+            <h3 className="text-2xl font-medium mb-3 text-center">MetaTrader 5 Technology</h3>
             <p className="text-gray-400 text-center text-sm mb-10">
-            The most powerful version of MetaTrader. Improve your trading style with advanced customization. You can access over 400 different CFDs in seconds and trade forex, indices, stocks, precious metals, commodities, bonds, and futures easily and quickly.
+            MT5 is the most advanced platform for modern traders. Access over 1,000 CFDs across forex, indices, stocks, metals, commodities, bonds, and futures, instantly. Trade with speed. Customize with freedom. Perform with confidence.
             </p>
             <div className="mt-7 flex flex-col items-center relative z-10">
-            {/* <button 
-                onClick={() => setShowMetatrader(!showMetatrader)}
-                className="relative w-64 py-3 px-6 rounded-xl font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group"
-              >
-                <span className="absolute inset-0 bg-[conic-gradient(at_top_left,_#ffffff99,_#ffffff33,_#ffffff99)] animate-spin-slow blur-md opacity-40 group-hover:opacity-70 rounded-xl"></span>
-                <span className="absolute inset-[2px] bg-[rgb(0, 0, 0)] rounded-xl z-0"></span>
-                <span className="relative z-10">
-                  {showreliable ? "Ocultar detalles" : "Ver Más"}
-                </span>
-              </button> */}
+          
             </div>
-            {/* {showreliable && (
-            <div className="mt-auto relative z-10">
-              <div className="flex items-start gap-2 mb-3">
-                <div className="min-w-5 h-5 rounded-full bg-[#B5946E]/10 flex items-center justify-center mt-0.5">
-                  <span className="text-[#B5946E]/80 text-xs font-bold">📊</span>
-                </div>
-                <div className="text-sm font-medium">Platform Features</div>
-              </div>
-
-              <div className="grid grid-cols-1 gap-2">
-                <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2 flex items-center justify-between">
-                  <div className="text-xs">Advanced Charts</div>
-                  <div className="text-xs text-[#B5946E]/80">Multiple Timeframes</div>
-                </div>
-                <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2 flex items-center justify-between">
-                  <div className="text-xs">Custom Indicators</div>
-                  <div className="text-xs text-[#B5946E]/80">2,000+ Available</div>
-                </div>
-                <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2 flex items-center justify-between">
-                  <div className="text-xs">Automated Trading</div>
-                  <div className="text-xs text-[#B5946E]/80">EA Support</div>
-                </div>
-                <div className="bg-[#111]/80 border border-gray-800 rounded-lg p-2 flex items-center justify-between">
-                  <div className="text-xs">Available On</div>
-                  <div className="text-xs text-[#B5946E]/80">Desktop & Mobile</div>
-                </div>
-              </div>
-            </div>
-            )} */}
           </div>
         </div>
       </div>

@@ -105,6 +105,9 @@ html {
   scroll-padding-bottom: 0;
   overscroll-behavior: none;
 }
+html {
+  scroll-padding-top: 88px; 
+}
 
 body {
   overscroll-behavior: none;
@@ -157,12 +160,16 @@ body {
   background-size: 200% 100%;
 }
 
-html, body, * {
-  scroll-behavior: auto !important;
-  -webkit-overflow-scrolling: auto !important;
-  overscroll-behavior: none !important;
-  touch-action: auto !important;
+html, body {
+  scroll-behavior: auto !important; /* No suave */
+  overscroll-behavior: auto !important; /* Permite scroll normal */
+  -webkit-overflow-scrolling: touch !important; /* Scroll fluido en móviles */
+  touch-action: auto !important; /* No bloquea gestos */
 }
+html, body, * {
+  overscroll-behavior: none !important; /* Esto puede romper scroll */
+}
+
 
 @media (max-width: 768px) {
   html, body {

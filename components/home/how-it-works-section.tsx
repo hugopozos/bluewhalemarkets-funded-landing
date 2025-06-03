@@ -43,7 +43,7 @@ export default function HowItWorksSection() {
     <section className="py-24 relative">
       <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"></div>
 
-      <div className="max-w-6xl mx-auto px-4 py-12 relative z-10 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.1)] backdrop-blur-sm bg-white/20">
+      <div className="max-w-6xl mx-auto px-4 py-12 relative z-10 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.1)] backdrop-blur-sm bg-white/5">
 
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-block px-4 py-1 rounded-full border border-gray-800 text-sm text-gray-400 mb-6">

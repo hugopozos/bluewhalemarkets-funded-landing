@@ -191,7 +191,9 @@ export default function ChallengesTable() {
                   <span className="text-4xl font-light">${price}</span>
                 </div>
                 <div className="text-xs text-gray-400 mb-6">For ${selectedAmount.toLocaleString()} account</div>
-                <button className="w-full bg-white text-black hover:bg-gray-100 rounded-full px-6 py-3 font-medium text-sm transition flex items-center justify-center gap-2">
+                <button  onClick={() => {
+    window.location.href = "https://funded.app.bluewhalemarkets.com/login";
+  }} className="w-full bg-white text-black hover:bg-gray-100 rounded-full px-6 py-3 font-medium text-sm transition flex items-center justify-center gap-2">
                   <span className="h-2 w-2 bg-black rounded-full"></span>
                   <span>Get Started</span>
                 </button>

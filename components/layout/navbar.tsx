@@ -25,11 +25,23 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-10 mx-2">
-          <Link href="/" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">Home</Link>
+          <Link href="/" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors"  onClick={(e) => {
+            e.preventDefault();
+            setMenuOpen(false);
+            window.location.href = '/'; 
+          }}>Home</Link>
           <Link href="#platform-preview" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">Platform</Link>
           <Link href="#trading-tools" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">Tools</Link>
           <Link href="#challenges" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">Challenges</Link>
           <Link href="#how-it-works" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">How To</Link>
+          <Link href="/contact" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors"
+          onClick={(e) => {
+            e.preventDefault();
+            setMenuOpen(false);
+            window.location.href = '/contact'; // Navegación manual
+          }}>
+          Contact Us
+        </Link>
         </nav>
 
         {/* Mobile Button */}
@@ -57,6 +69,11 @@ export default function Navbar() {
           <Link href="#trading-tools" className="text-sm text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>Tools</Link>
           <Link href="#challenges" className="text-sm text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>Challenges</Link>
           <Link href="#how-it-works" className="text-sm text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>How To</Link>
+          <Link href="/contact" className="text-sm text-gray-300 hover:text-white"    onClick={(e) => {
+            e.preventDefault();
+            setMenuOpen(false);
+            window.location.href = '/contact'; 
+          }}>Contact Us</Link>
           <Link href="#get-started" className="text-sm mt-2 bg-transparent border border-gray-700 text-white rounded-full px-3 py-1 text-[11px] text-center" onClick={() => setMenuOpen(false)}>
             Get Funded
           </Link>

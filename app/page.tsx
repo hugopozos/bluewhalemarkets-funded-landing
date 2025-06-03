@@ -27,6 +27,24 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    const handleClick = (e: any) => {
+      const href = e.target?.getAttribute("href");
+      if (href?.startsWith("#")) {
+        e.preventDefault();
+        const el = document.querySelector(href);
+        if (el) {
+          const yOffset = -88; // ajuste por el navbar
+          const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }
+    };
+  
+    document.querySelectorAll("a[href^='#']").forEach((link) => {
+      link.addEventListener("click", handleClick);
+    });
+  
+
     if (typeof window === 'undefined' || !mainRef.current) return;
 
     const containerWidth = mainRef.current.clientWidth || window.innerWidth;
@@ -60,14 +78,15 @@ export default function Home() {
 
    
      
-      <div
-        className="absolute inset-0 z-0 bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-20 " 
-        style={{
-          background:
-            "linear-gradient(to bottom right, rgba(0,0,0,1), rgba(30,20,60,0.8)), radial-gradient(#333 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
-        }}
-      />
+<div
+  className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-20" 
+  style={{
+    background:
+      "linear-gradient(to bottom right, rgba(0,0,0,1), rgba(30,20,60,0.8)), radial-gradient(#333 1px, transparent 1px)",
+    backgroundSize: "20px 20px",
+  }}
+/>
+
        
       <Navbar />
       <main ref={mainRef} className="relative z-10 flex-grow home">
@@ -107,8 +126,9 @@ export default function Home() {
         )}
 
         {/* Dashboard Preview Section */}
-        <section id="platform-preview" className="py-24 relative">
-          <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"></div>
+        <section id="platform-preview" className="scroll-mt-[88px]">
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"></div>
+
           <div className="max-w-5xl mx-auto px-4 relative">
             <div className="flex flex-col items-center text-center mb-16">
               <div className="inline-block px-4 py-1 rounded-full border border-gray-800 text-sm text-gray-400 mb-6">
@@ -126,29 +146,32 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section id="trading-tools">
+        <section id="trading-tools" className="scroll-mt-[88px]">
           <FeaturesSection />
         </section>
 
         {/* Challenges Table Section */}
-        <section id="challenges">
+        <section id="challenges"  className="scroll-mt-[88px]">
           <ChallengesTable />
         </section>
 
         {/* How It Works Section */}
-        <section id="how-it-works">
+        <section id="how-it-works" className="scroll-mt-[88px]">
           <HowItWorksSection />
         </section>
 
+      
         {/* Testimonials Section */}
-        <section id="testimonials">
+        <section id="testimonials" className="scroll-mt-[88px]">
           <TestimonialsSection />
         </section>
 
+      
         {/* CTA Section */}
-        <section id="get-started">
+        <section id="get-started" className="scroll-mt-[88px]">
           <CTASection />
         </section>
+       
       </main>
 
       <Footer />
