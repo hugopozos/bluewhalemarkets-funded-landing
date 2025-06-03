@@ -54,7 +54,7 @@ export default function Navbar() {
 
         {/* Botón de acción */}
         <Link 
-          href="#get-started"
+          href="https://funded.app.bluewhalemarkets.com/login"
           className="hidden md:inline-block bg-transparent border border-gray-700 hover:border-gray-500 text-white rounded-full px-3 py-1 text-[11px] font-medium transition-colors"
         >
           Get Funded

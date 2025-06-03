@@ -13,7 +13,8 @@ import HeroDashboardPreview from "@/components/home/hero-dashboard-preview"
 import { motion } from "framer-motion";
 import { useRef, useLayoutEffect, useState, useEffect } from "react";
 
-const NUM_PROTONES = 24;
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+const NUM_PROTONES = isMobile ? 5 : 24;
 
 export default function Home() {
   const mainRef = useRef<HTMLElement | null>(null);

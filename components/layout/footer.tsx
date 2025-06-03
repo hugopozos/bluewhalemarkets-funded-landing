@@ -1,10 +1,13 @@
 'use client'
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Twitter, Linkedin, Instagram, Globe, Phone, Mail } from "lucide-react"
 
 export default function Footer() {
+   const [menuOpen, setMenuOpen] = useState(false)
+  
   return (
     <footer className="border-t border-gray-800 bg-black w-full relative">
       {/* Fondo con sutil gradiente */}
@@ -101,9 +104,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
+                <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center"  onClick={(e) => {
+            e.preventDefault();
+            setMenuOpen(false);
+            window.location.href = '/contact'; // Navegación manual
+          }}>
                   <span className="bg-gradient-to-r from-[#1F485E]/70 to-[#1F485E]/10 h-[1px] w-3 inline-block mr-2"></span>
-                  About Us
+            Contact Us
                 </Link>
               </li>
             </ul>
