@@ -17,6 +17,7 @@ export default function CTASection() {
           {/* <source src="/videos/ocean01.mp4" type="video/mp4" /> */}
           <source src="/videos/footer-final2.webm" type="video/webm" />
         </video>
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
         
         {/* Solo el gradiente superior */}
         <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black to-transparent"></div>

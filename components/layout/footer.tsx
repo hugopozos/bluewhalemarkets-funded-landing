@@ -55,25 +55,25 @@ export default function Footer() {
             <h3 className="text-white font-medium mb-5 pb-2 border-b border-gray-800 inline-block">Trading</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
+                <Link href="#challenges" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
                   <span className="bg-gradient-to-r from-[#1F485E]/70 to-[#1F485E]/10 h-[1px] w-3 inline-block mr-2"></span>
                   Challenge Accounts
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
+                <Link href="#how-it-works" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
                   <span className="bg-gradient-to-r from-[#1F485E]/70 to-[#1F485E]/10 h-[1px] w-3 inline-block mr-2"></span>
                   How it works
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
+                <Link href="#trading-tools" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
                   <span className="bg-gradient-to-r from-[#1F485E]/70 to-[#1F485E]/10 h-[1px] w-3 inline-block mr-2"></span>
                   Trading Rules
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
+                <Link href="#trading-tools" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
                   <span className="bg-gradient-to-r from-[#1F485E]/70 to-[#1F485E]/10 h-[1px] w-3 inline-block mr-2"></span>
                   Trading Tools
                 </Link>
@@ -92,7 +92,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
+                <Link href="#testimonials" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
                   <span className="bg-gradient-to-r from-[#1F485E]/70 to-[#1F485E]/10 h-[1px] w-3 inline-block mr-2"></span>
                   Testimonials
                 </Link>
