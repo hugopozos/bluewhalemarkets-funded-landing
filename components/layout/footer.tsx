@@ -98,7 +98,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
+                <Link href="https://help.clubprotraders.com/faq" className="text-gray-400 hover:text-[#B5946E] text-sm transition-colors duration-200 flex items-center">
                   <span className="bg-gradient-to-r from-[#1F485E]/70 to-[#1F485E]/10 h-[1px] w-3 inline-block mr-2"></span>
                   FAQ
                 </Link>
