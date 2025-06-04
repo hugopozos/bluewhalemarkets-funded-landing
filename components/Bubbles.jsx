@@ -10,7 +10,7 @@ export default function PlatformPreviewSection() {
         style={{
           background:
             "conic-gradient(from 0deg, #9333ea, #06b6d4 40%, #f43f5e 80%, #9333ea)",
-          filter: "blur(80px)",
+          // filter: "blur(80px)",
         }}
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, ease: "linear", duration: 18 }}

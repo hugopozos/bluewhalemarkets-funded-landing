@@ -121,8 +121,10 @@ export default function ChallengesTable() {
 
       {/* Efectos de luz sutiles en el fondo */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-[20%] left-[-10%] w-[40%] h-[40%] bg-blue-900/5 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-indigo-900/5 blur-[100px] rounded-full"></div>
+        <div className="hidden md:block absolute top-[20%] left-[-10%] w-[40%] h-[40%] bg-blue-900/5 blur-[120px] rounded-full"></div>
+
+        {/* <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-indigo-900/5 blur-[100px] rounded-full"></div> */}
+        <div className="hidden sm:block absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-indigo-900/5 blur-[100px] rounded-full"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 relative">

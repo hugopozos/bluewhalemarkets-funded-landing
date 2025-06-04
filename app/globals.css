@@ -108,15 +108,12 @@ body:after {
 /* Hack para Chrome y Firefox para evitar scroll extra */
 html {
   scroll-padding-bottom: 0;
-  overscroll-behavior: none;
 }
 html {
   scroll-padding-top: 88px; 
 }
 
-body {
-  overscroll-behavior: none;
-}
+
 @keyframes orbit {
   from {
     transform: translate(-50%, -50%) rotate(0deg) translateX(400px) rotate(0deg);
@@ -166,13 +163,20 @@ body {
 }
 
 html, body {
-  scroll-behavior: auto !important; /* No suave */
-  overscroll-behavior: auto !important; /* Permite scroll normal */
-  -webkit-overflow-scrolling: touch !important; /* Scroll fluido en móviles */
-  touch-action: auto !important; /* No bloquea gestos */
+  scroll-behavior: auto !important; 
+  -webkit-overflow-scrolling: touch !important; 
+  overscroll-behavior: auto !important; 
 }
-html, body, * {
-  overscroll-behavior: none !important; /* Esto puede romper scroll */
+@media (max-width: 768px) {
+  .home {
+    background-attachment: scroll !important;
+    will-change: auto;
+  }
+
+  .motion-div-optimized {
+    filter: none !important;
+    background: none !important;
+  }
 }
 
 
