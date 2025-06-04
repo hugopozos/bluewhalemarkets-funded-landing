@@ -34,10 +34,7 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
       question: "¿Can I trade during news events?",
       answer: "No trades may be opened 5 minutes before or after high-impact news events (marked in red folders on Forex Factory).",
     },
-    {
-      question: "¿Is Stop Loss mandatory?",
-      answer: `No trades may be opened 5 minutes before or after high-impact news events (marked in red folders on Forex Factory).`,
-    },
+   
     {
       question: "¿Is Stop Loss mandatory?",
       answer:
@@ -46,9 +43,9 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
     },
     {
       question: "¿What leverage is offered?",
-      answer: `1:50 for Forex
-                1:30 for indices and commodities
-                Using more than 50% of the available margin in a single trade is not allowed. This is not considered a violation, as the platform will simply block any attempt to open a trade exceeding this limit. This is to prevent “full margin,” “gambling,” or “all or nothing” behavior.`,
+      answer: ["1:50 for Forex",
+                "1:30 for indices and commodities",
+                "Using more than 50% of the available margin in a single trade is not allowed. This is not considered a violation, as the platform will simply block any attempt to open a trade exceeding this limit. This is to prevent “full margin,” “gambling,” or “all or nothing” behavior."],
     },
     {
       question: "¿Which platforms can I use?",
@@ -60,32 +57,42 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
       },
     {
       question: "¿What are the conditions for swap, spread, and commissions?",
-      answer: `Commission: $5 per lot traded.
+      answer: ["Commission: $5 per lot traded.",
 
-                You can view live trading conditions by logging into the following MT5 account:
+                "You can view live trading conditions by logging into the following MT5 account:",
 
-                Server: BlueWhaleMarkets-Server
-                Login: 234955745
-                Password: H*NtXpR7
-
-                `,
+                    "-Server: BlueWhaleMarkets-Server",
+                    "-Login: 234955745",
+                    "-Password: H*NtXpR7",],
     },
     {
         question: "¿Which strategies are prohibited?",
         answer: [
             "Any form of exploitation or abuse of the platform is strictly forbidden and violates our Terms of Service. Please review our full guidelines to avoid penalties.",
-            "- Gambling: Strategies that involve excessive leverage or \"all or nothing\" behavior are not tolerated. No trade may use over 50% of the available margin.",
-            "- High-Frequency Trading (HFT): Using ultra-fast algorithms to execute a large volume of trades in milliseconds is not allowed.",
-            "- Latency Trading: Exploiting delayed market data or execution lags to guarantee profits is prohibited.",
-            "- Copy Trading Others: You cannot copy trades across accounts not owned by the same person (including relatives or friends).",
-            "- Hedging Across Multiple Accounts: Hedging trades across different accounts is not allowed.",
-            "- Arbitrage Trading: Using price discrepancies between platforms or assets to generate risk-free profits is not allowed.",
-            "- Tick Scalping: Engaging in high-volume trades to profit from minor price fluctuations over a short time is prohibited.",
-            "- Grid Trading: Placing opposing buy/sell orders with similar risk parameters across multiple accounts or firms is not allowed.",
-            "- One-Sided Betting: Taking trades in only one direction without proper market analysis or rationale is prohibited.",
-            "- Shared Accounts: Sharing or reselling accounts is not allowed.",
-            "- Hyperactivity: Executing an excessive number of trades in a short time frame is not allowed.",
-            "- Exploiting platform/data freezes or demo server errors: Using any unfair advantage due to platform malfunctions or data lags is strictly forbidden to ensure fair play for all."
+            "Gambling: ",
+                "-Strategies that involve excessive leverage or \"all or nothing\" behavior are not tolerated. No trade may use over 50% of the available margin.",
+            "High-Frequency Trading (HFT): ",
+                "-Using ultra-fast algorithms to execute a large volume of trades in milliseconds is not allowed.",
+            "Latency Trading: ",
+                "- Exploiting delayed market data or execution lags to guarantee profits is prohibited.",
+            "Copy Trading Others: ",
+                "- You cannot copy trades across accounts not owned by the same person (including relatives or friends).",
+            "Hedging Across Multiple Accounts: ",
+                "- Hedging trades across different accounts is not allowed.",
+            "Arbitrage Trading: ",
+                "- Using price discrepancies between platforms or assets to generate risk-free profits is not allowed.",
+            "Tick Scalping: ",
+                "- Engaging in high-volume trades to profit from minor price fluctuations over a short time is prohibited.",
+            "Grid Trading: ",
+                "- Placing opposing buy/sell orders with similar risk parameters across multiple accounts or firms is not allowed.",
+            "One-Sided Betting: ",
+                "- Taking trades in only one direction without proper market analysis or rationale is prohibited.",
+            "Shared Accounts: ",
+                "- Sharing or reselling accounts is not allowed.",
+            "Hyperactivity: ", 
+                "- Executing an excessive number of trades in a short time frame is not allowed.",
+            "Exploiting platform/data freezes or demo server errors: ",
+                "- Using any unfair advantage due to platform malfunctions or data lags is strictly forbidden to ensure fair play for all."
           ]
       },
       {
@@ -95,24 +102,26 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
       },
       {
         question: "¿Can I use different IPs to trade?",
-        answer: ["No. You are not allowed to connect from multiple geographic locations simultaneously.",
-            "Challenges",
-               " 1-Phase Challenge:",
-               " - Profit Target: 8%",
-               " - Daily Loss Limit: 4%",
-               " - Total Loss Limit: 9%",
-                "- Minimum Trading Days: 5",
-                "2-Phase Challenge:",
-             "Phase 1:",
-                "- Profit Target: 6%",
-                "- Daily Loss Limit: 9%",
-                "- Total Loss Limit: 4%",
-                "- Minimum Trading Days: 5",
-                "Phase 2:",
-                "- Profit Target: 6%",
-                "- Daily Loss Limit: —",
-                "- Total Loss Limit: —",
-                "- Minimum Trading Days: 5"],
+        answer: ["No. You are not allowed to connect from multiple geographic locations simultaneously."],
+      },
+      {
+        question: "Challenges",
+        answer:  [" 1-Phase Challenge:",
+                        " - Profit Target: 8%",
+                        " - Daily Loss Limit: 4%",
+                        " - Total Loss Limit: 9%",
+                        "- Minimum Trading Days: 5",
+                    "2-Phase Challenge:",
+                        "Phase 1:",
+                            "- Profit Target: 6%",
+                            "- Daily Loss Limit: 9%",
+                            "- Total Loss Limit: 4%",
+                            "- Minimum Trading Days: 5",
+                        "Phase 2:",
+                            "- Profit Target: 6%",
+                            "- Daily Loss Limit: —",
+                            "- Total Loss Limit: —",
+                            "- Minimum Trading Days: 5"],
       },
       {
         question: "¿What should I do after completing my challenge?",
@@ -130,19 +139,21 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
       },
       {
         question: "¿What are the withdrawal methods?",
-        answer: ["Cryptocurrency.",
-                    "Profit Split:",
-                    "- 1st Payout: 70%",
+        answer: ["Cryptocurrency."],
+      },
+      {
+        question: "Profit Split:",
+        answer:[" - 1st Payout: 70%",
 
 
-                   " - 2nd Payout: 80%",
+                " - 2nd Payout: 80%",
 
 
-                    "- 3rd and beyond: 90%",
-
-
-                    "Payout Schedule:",
-                    "- Every 21 business days."],
+                " - 3rd and beyond: 90%"],
+      },
+      {
+        question: "Payout Schedule:",
+        answer:["- Every 21 business days."],
       },
       {
         question: "¿Are there minimum days required before withdrawal?",
@@ -159,15 +170,19 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
       {
         question: "¿Can I trade from the U.S.?",
       
-        answer: ["Yes, if you reside in the U.S., but U.S. citizens are not allowed.",
-                   "Restricted Access Policy",
+        answer: ["Yes, if you reside in the U.S., but U.S. citizens are not allowed."]
+      },
+      {
+        question: "Restricted Access Policy",
+      
+        answer: [
                    "At Blue Whale Markets Funded, we aim to offer international access to our services. However, due to compliance and regulatory reasons, certain countries are excluded.",
                    "Requirements to Participate:",
-                   "Be of legal age in your country of residence.",
-                   "Successfully complete identity verification (KYC).",
-                   "Submit valid government-issued documentation: passport, national ID, or driver’s license.",
-                   "Restricted Countries:",
-                   "Due to regulatory compliance, we do not accept users located in Cuba."]
+                        "- Be of legal age in your country of residence.",
+                        "- Successfully complete identity verification (KYC).",
+                        "- Submit valid government-issued documentation: passport, national ID, or driver’s license.",
+                    "Restricted Countries:",
+                    "Due to regulatory compliance, we do not accept users located in Cuba."]
       }
       
   ], 
@@ -188,66 +203,64 @@ export default function FAQSection() {
 
   return (
     <section className="relative py-24 px-6">
-    {/* Glow + fondo dentro del contenedor principal directamente */}
-    <div className="relative z-10 bg-black/5 backdrop-blur-xl border border-cyan-400/20 rounded-2xl p-6 shadow-[0_0_60px_10px_#00ffff33] ring-1 ring-cyan-400/30">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-semibold text-center mb-12 text-white">FAQ</h2>
-  
-        {/* Botones de categoría */}
-        <div className="flex justify-center gap-4 mb-8">
-          {Object.keys(faqs).map((category) => (
+  <div className="relative z-10 bg-black/5 backdrop-blur-xl border border-gray-700 rounded-2xl p-6">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-4xl font-semibold text-center mb-12 text-white">FAQ</h2>
+
+      <div className="flex justify-center gap-4 mb-8">
+        {Object.keys(faqs).map((category) => (
+          <button
+            key={category}
+            onClick={() => setSelectedCategory(category as FAQCategory)}
+            className={`px-4 py-2 rounded-full border ${
+              selectedCategory === category
+                ? "bg-white text-black"
+                : "border-gray-600 text-gray-400"
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <div className="space-y-4">
+        {faqs[selectedCategory].map((faq, idx) => (
+          <div key={idx} className="border border-gray-700 rounded-lg">
             <button
-              key={category}
-              onClick={() => setSelectedCategory(category as FAQCategory)}
-              className={`px-4 py-2 rounded-full border ${
-                selectedCategory === category
-                  ? "bg-white text-black"
-                  : "border-gray-600 text-gray-400"
-              }`}
+              className="w-full text-left p-4 flex justify-between items-center"
+              onClick={() => toggleIndex(idx)}
             >
-              {category}
+              <span className="font-medium">{faq.question}</span>
+              <ChevronDown
+                className={`transition-transform ${
+                  openIndexes.includes(idx) ? "rotate-180" : ""
+                }`}
+              />
             </button>
-          ))}
-        </div>
-  
-        {/* Preguntas */}
-        <div className="space-y-4">
-          {faqs[selectedCategory].map((faq, idx) => (
-            <div key={idx} className="border border-gray-700 rounded-lg">
-              <button
-                className="w-full text-left p-4 flex justify-between items-center"
-                onClick={() => toggleIndex(idx)}
-              >
-                <span className="font-medium">{faq.question}</span>
-                <ChevronDown
-                  className={`transition-transform ${
-                    openIndexes.includes(idx) ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {openIndexes.includes(idx) && (
-                <div className="p-4 border-t border-gray-700 text-gray-400 text-left space-y-2">
-                  {Array.isArray(faq.answer) ? (
-                    faq.answer.map((line, i) =>
-                      line.trim().startsWith("-") ? (
-                        <li key={i} className="ml-5 list-disc">
-                          {line.slice(1).trim()}
-                        </li>
-                      ) : (
-                        <p key={i} className="text-center">{line}</p>
-                      )
+            {openIndexes.includes(idx) && (
+              <div className="p-4 border-t border-gray-700 text-gray-400 text-left space-y-2">
+                {Array.isArray(faq.answer) ? (
+                  faq.answer.map((line, i) =>
+                    line.trim().startsWith("-") ? (
+                      <li key={i} className="ml-5 list-disc">
+                        {line.slice(1).trim()}
+                      </li>
+                    ) : (
+                      <p key={i} className="text-center">{line}</p>
                     )
-                  ) : (
-                    <p>{faq.answer}</p>
-                  )}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+                  )
+                ) : (
+                  <p>{faq.answer}</p>
+                )}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
   
 
   );
