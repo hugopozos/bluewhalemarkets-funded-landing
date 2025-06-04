@@ -18,6 +18,11 @@ html, body {
   height: 100%;
   overflow-x: hidden;
 }
+body {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
 
 /* Utilidades básicas */
 @layer utilities {

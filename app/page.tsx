@@ -119,6 +119,8 @@ export default function Home() {
                   filter: "blur(50px)",
                   opacity: 0.75,
                   pointerEvents: "none",
+                  willChange: "transform",
+                  transform: "translateZ(0)",
                   zIndex: 0,
                 }}
               />
