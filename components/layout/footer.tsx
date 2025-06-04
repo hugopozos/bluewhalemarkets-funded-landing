@@ -14,9 +14,9 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-b from-black to-[#0F2A38]/20 pointer-events-none"></div>
       
       {/* Efecto de resplandor sutil */}
-      <div className="absolute left-1/4 top-0 w-96 h-96 bg-[#1F485E]/5 blur-[100px] rounded-full opacity-60 pointer-events-none"></div>
-      <div className="absolute right-1/4 bottom-0 w-96 h-96 bg-[#B5946E]/5 blur-[100px] rounded-full opacity-60 pointer-events-none"></div>
-      
+      <div className="absolute left-1/4 top-0 w-96 h-96 bg-[#1F485E]/5 md:blur-[100px] blur-none rounded-full opacity-60 pointer-events-none"></div>
+      <div className="absolute right-1/4 bottom-0 w-96 h-96 bg-[#B5946E]/5 md:blur-[100px] blur-none rounded-full opacity-60 pointer-events-none"></div>
+
       <div className="max-w-6xl mx-auto px-4 py-16 relative">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
           {/* Logo y descripción */}

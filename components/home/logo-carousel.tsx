@@ -47,7 +47,7 @@ export default function LogoCarousel() {
           WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
         }}>
         <div 
-          className="flex space-x-24 py-4 animate-slide"
+          className="flex py-4 animate-slide space-x-8 sm:space-x-12 lg:space-x-24"
           style={{
             whiteSpace: 'nowrap',
             width: 'max-content',

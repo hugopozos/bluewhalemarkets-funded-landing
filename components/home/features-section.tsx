@@ -110,7 +110,7 @@ export default function FeaturesSection() {
             <span className="absolute inset-0 rounded-full bg-[conic-gradient(at_center,_#ffffff33,_#ffffff99,_#ffffff33)] animate-spin-slow blur-sm opacity-40 group-hover:opacity-70 z-0"></span>
             <span className="absolute inset-[2px] bg-[#0a0a0a] rounded-full z-0"></span>
             <span className="relative z-10">
-              Únete a Discord
+            Join Discord
             </span>
           </a>
 
@@ -152,7 +152,7 @@ export default function FeaturesSection() {
                   <span className="absolute inset-0 rounded-full bg-[conic-gradient(at_center,_#ffffff33,_#ffffff99,_#ffffff33)] animate-spin-slow blur-sm opacity-40 group-hover:opacity-70 z-0"></span>
                   <span className="absolute inset-[2px] bg-[#0a0a0a] rounded-full z-0"></span>
                   <span className="relative z-10">
-                    Ver Más
+                  Contact us
                   </span>
                 </button>
               </a>
