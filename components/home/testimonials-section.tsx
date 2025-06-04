@@ -10,48 +10,50 @@ export default function TestimonialsSection() {
   useEffect(() => {
     const scrollContainer = containerRef.current
     if (!scrollContainer) return
-
+  
     let animationFrameId: number
     let scrollPos = 0
     const scrollSpeed = 0.5
     const totalWidth = scrollContainer.scrollWidth
-    const viewportWidth = scrollContainer.offsetWidth
-
+  
     const scroll = () => {
       scrollPos += scrollSpeed
-
-      // Reset position when we've scrolled through half the items
       if (scrollPos >= totalWidth / 2) {
         scrollPos = 0
       }
-
+  
       scrollContainer.scrollLeft = scrollPos
       animationFrameId = requestAnimationFrame(scroll)
     }
-   
-
-    animationFrameId = requestAnimationFrame(scroll)
-
-    // Pause animation on hover
-    const handleMouseEnter = () => {
-      cancelAnimationFrame(animationFrameId)
-    }
-
-    const handleMouseLeave = () => {
+  
+    let isPaused = false
+  
+    const startScroll = () => {
+      if (!isPaused) return
+      isPaused = false
       animationFrameId = requestAnimationFrame(scroll)
     }
-
-    scrollContainer.addEventListener("mouseenter", handleMouseEnter)
-    scrollContainer.addEventListener("mouseleave", handleMouseLeave)
-
+  
+    const stopScroll = () => {
+      if (isPaused) return
+      isPaused = true
+      cancelAnimationFrame(animationFrameId)
+    }
+  
+    // Inicia scroll
+    animationFrameId = requestAnimationFrame(scroll)
+  
+    // Eventos para pausar en hover sobre container o hijos
+    scrollContainer.addEventListener("mouseenter", stopScroll)
+    scrollContainer.addEventListener("mouseleave", startScroll)
+  
     return () => {
       cancelAnimationFrame(animationFrameId)
-      if (scrollContainer) {
-        scrollContainer.removeEventListener("mouseenter", handleMouseEnter)
-        scrollContainer.removeEventListener("mouseleave", handleMouseLeave)
-      }
+      scrollContainer.removeEventListener("mouseenter", stopScroll)
+      scrollContainer.removeEventListener("mouseleave", startScroll)
     }
   }, [])
+  
 
   const testimonials = [
     {
