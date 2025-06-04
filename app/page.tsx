@@ -72,6 +72,7 @@ export default function Home() {
 
     setProtonConfigs(configs);
   }, [mainHeight]);
+  const isIphone = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/.test(navigator.userAgent);
 
   return (
     
@@ -116,7 +117,7 @@ export default function Home() {
                   height: config.size,
                   borderRadius: "50%",
                   background: "radial-gradient(circle at center, #B5946E, #1F485E, transparent 80%)",
-                  filter: "blur(50px)",
+                  filter: isIphone ? undefined : "blur(50px)", 
                   opacity: 0.75,
                   pointerEvents: "none",
                   willChange: "transform",
