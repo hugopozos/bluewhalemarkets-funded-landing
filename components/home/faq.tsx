@@ -27,7 +27,7 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
     },
     {
       question: "¿Is copy trading allowed?",
-      answer: `SOnly between accounts owned by the same person.
+      answer: `Only between accounts owned by the same person.
                 Copy trading across accounts owned by different individuals (including family or friends) is strictly prohibited and will result in account termination.`,
     },
     {
@@ -47,10 +47,7 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
                 "1:30 for indices and commodities",
                 "Using more than 50% of the available margin in a single trade is not allowed. This is not considered a violation, as the platform will simply block any attempt to open a trade exceeding this limit. This is to prevent “full margin,” “gambling,” or “all or nothing” behavior."],
     },
-    {
-      question: "¿Which platforms can I use?",
-      answer: "MetaTrader 5.",
-    },
+  
     {
         question: "¿What is a minimum trading day?",
         answer: "A day in which you open at least one trade.",
@@ -119,8 +116,8 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
                             "- Minimum Trading Days: 5",
                         "Phase 2:",
                             "- Profit Target: 6%",
-                            "- Daily Loss Limit: —",
-                            "- Total Loss Limit: —",
+                            "- Daily Loss Limit: 9%",
+                            "- Total Loss Limit: 4%",
                             "- Minimum Trading Days: 5"],
       },
       {
@@ -246,7 +243,7 @@ export default function FAQSection() {
                         {line.slice(1).trim()}
                       </li>
                     ) : (
-                      <p key={i} className="text-center">{line}</p>
+                      <p key={i} className="text-left">{line}</p>
                     )
                   )
                 ) : (
