@@ -25,7 +25,7 @@
           className={`absolute inset-0 bg-black/90 transition-opacity duration-500 ${isLoaded ? 'opacity-0' : 'opacity-100'}`}
         />
 
-        { (
+        {!isMobile && (
           <video
             ref={videoRef}
             autoPlay

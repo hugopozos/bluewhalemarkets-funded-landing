@@ -126,7 +126,7 @@ export default function TestimonialsSection() {
       ))
   }
 
-  const [expanded, setExpanded] = useState(false);
+  const [expanded] = useState(false);
   return (
     <section className="py-24 relative bg-black/1 backdrop-blur-sm rounded-xl">
       {/* Fondo con efecto de puntos */}
