@@ -187,15 +187,13 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-24 px-6 bg-black/5 backdrop-blur rounded-xl relative">
+    <section className="relative py-24 px-6">
+    {/* Glow + fondo dentro del contenedor principal directamente */}
+    <div className="relative z-10 bg-black/5 backdrop-blur-xl border border-cyan-400/20 rounded-2xl p-6 shadow-[0_0_60px_10px_#00ffff33] ring-1 ring-cyan-400/30">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-semibold text-center mb-12">
-         FAQ
-        </h2>
-        <div className="absolute -inset-[1px] before:absolute before:inset-0 before:rounded-2xl before:bg-[conic-gradient(from_0deg_at_50%_50%,#00ffff33,#00000000_30%,#00ffff33)] before:animate-spin-slow before:opacity-30 pointer-events-none z-0"></div>
-
-{/* Efecto de resplandor azul */}
-<div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#1F485E]/10 blur-3xl rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
+        <h2 className="text-4xl font-semibold text-center mb-12 text-white">FAQ</h2>
+  
+        {/* Botones de categoría */}
         <div className="flex justify-center gap-4 mb-8">
           {Object.keys(faqs).map((category) => (
             <button
@@ -211,7 +209,8 @@ export default function FAQSection() {
             </button>
           ))}
         </div>
-
+  
+        {/* Preguntas */}
         <div className="space-y-4">
           {faqs[selectedCategory].map((faq, idx) => (
             <div key={idx} className="border border-gray-700 rounded-lg">
@@ -227,25 +226,29 @@ export default function FAQSection() {
                 />
               </button>
               {openIndexes.includes(idx) && (
-               <div className="p-4 border-t border-gray-700 text-gray-400 text-left space-y-2">
-               {Array.isArray(faq.answer)
-                 ? faq.answer.map((line, i) =>
-                     line.trim().startsWith("-") ? (
-                       <li key={i} className="ml-5 list-disc">{line.slice(1).trim()}</li>
-                     ) : (
-                       <p key={i} className="text-center">{line}</p>
-                     )
-                   )
-                 : <p>{faq.answer}</p>
-               }
-             </div>
-             
-             
+                <div className="p-4 border-t border-gray-700 text-gray-400 text-left space-y-2">
+                  {Array.isArray(faq.answer) ? (
+                    faq.answer.map((line, i) =>
+                      line.trim().startsWith("-") ? (
+                        <li key={i} className="ml-5 list-disc">
+                          {line.slice(1).trim()}
+                        </li>
+                      ) : (
+                        <p key={i} className="text-center">{line}</p>
+                      )
+                    )
+                  ) : (
+                    <p>{faq.answer}</p>
+                  )}
+                </div>
               )}
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  
+
   );
 }
