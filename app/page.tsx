@@ -13,13 +13,13 @@ import HeroDashboardPreview from "@/components/home/hero-dashboard-preview"
 import { motion } from "framer-motion";
 import { useRef, useLayoutEffect, useState, useEffect } from "react";
 
-const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-const NUM_PROTONES = isMobile ? 5 : 24;
-
 export default function Home() {
   const mainRef = useRef<HTMLElement | null>(null);
   const [mainHeight, setMainHeight] = useState(0);
   const [protonConfigs, setProtonConfigs] = useState<any[]>([]);
+  const [showProtons, setShowProtons] = useState(false);
+
+  const NUM_PROTONES = 24;
 
   useLayoutEffect(() => {
     if (mainRef.current) {
@@ -28,32 +28,46 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    const userAgent = typeof navigator !== "undefined" ? navigator.userAgent : "";
+    const isMobileDevice = /Mobi|Android|iPhone|iPad|iPod/i.test(userAgent);
+
+    if (!isMobileDevice) {
+      setShowProtons(true);
+    }
+
     const handleClick = (e: any) => {
       const href = e.target?.getAttribute("href");
       if (href?.startsWith("#")) {
         e.preventDefault();
         const el = document.querySelector(href);
         if (el) {
-          const yOffset = -88; // ajuste por el navbar
+          const yOffset = -88;
           const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
         }
       }
     };
-  
+
     document.querySelectorAll("a[href^='#']").forEach((link) => {
       link.addEventListener("click", handleClick);
     });
-  
 
-    if (typeof window === 'undefined' || !mainRef.current) return;
+    return () => {
+      document.querySelectorAll("a[href^='#']").forEach((link) => {
+        link.removeEventListener("click", handleClick);
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!showProtons || typeof window === 'undefined' || !mainRef.current) return;
 
     const containerWidth = mainRef.current.clientWidth || window.innerWidth;
     const containerHeight = mainRef.current.clientHeight || window.innerHeight;
 
     const configs = Array.from({ length: NUM_PROTONES }).map(() => {
-      const orbitRadius = 200 + Math.random() * 300; 
-      const size = 150 + Math.random() * 300; 
+      const orbitRadius = 200 + Math.random() * 300;
+      const size = 150 + Math.random() * 300;
       const duration = 10 + Math.random() * 15;
       const startAngle = Math.random() * 360;
 
@@ -71,35 +85,30 @@ export default function Home() {
     });
 
     setProtonConfigs(configs);
-  }, [mainHeight]);
-  const isIphone = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/.test(navigator.userAgent);
+  }, [mainHeight, showProtons]);
 
   return (
-    
-    <div className="flex flex-col min-h-screen bg-black text-white ">
+    <div className="flex flex-col min-h-screen bg-black text-white">
 
-   
-     
-<div
-  className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-20" 
-  style={{
-    background:
-      "linear-gradient(to bottom right, rgba(0,0,0,1), rgba(30,20,60,0.8)), radial-gradient(#333 1px, transparent 1px)",
-    backgroundSize: "20px 20px",
-  }}
-/>
+      {/* Fondo general */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-20"
+        style={{
+          background:
+            "linear-gradient(to bottom right, rgba(0,0,0,1), rgba(30,20,60,0.8)), radial-gradient(#333 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
+        }}
+      />
 
-       
       <Navbar />
+
       <main ref={mainRef} className="relative z-10 flex-grow home">
-        
         <section className="relative z-10">
-          
           <HeroSection />
-          
         </section>
 
-        {mainHeight > 0 && (
+        {/* Proton animation solo en desktop */}
+        {mainHeight > 0 && showProtons && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
             {protonConfigs.map((config, i) => (
               <motion.div
@@ -117,7 +126,7 @@ export default function Home() {
                   height: config.size,
                   borderRadius: "50%",
                   background: "radial-gradient(circle at center, #B5946E, #1F485E, transparent 80%)",
-                  filter: isIphone ? undefined : "blur(50px)", 
+                  filter: "blur(50px)",
                   opacity: 0.75,
                   pointerEvents: "none",
                   willChange: "transform",
@@ -129,9 +138,9 @@ export default function Home() {
           </div>
         )}
 
-        {/* Dashboard Preview Section */}
+        {/* Platform Preview */}
         <section id="platform-preview" className="scroll-mt-[88px]">
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"></div>
+          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"></div>
 
           <div className="max-w-5xl mx-auto px-4 relative">
             <div className="flex flex-col items-center text-center mb-16">
@@ -149,33 +158,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Features Section */}
         <section id="trading-tools" className="scroll-mt-[88px]">
           <FeaturesSection />
         </section>
 
-        {/* Challenges Table Section */}
-        <section id="challenges"  className="scroll-mt-[88px]">
+        <section id="challenges" className="scroll-mt-[88px]">
           <ChallengesTable />
         </section>
 
-        {/* How It Works Section */}
         <section id="how-it-works" className="scroll-mt-[88px]">
           <HowItWorksSection />
         </section>
 
-      
-        {/* Testimonials Section */}
         <section id="testimonials" className="scroll-mt-[88px]">
           <TestimonialsSection />
         </section>
 
-      
-        {/* CTA Section */}
         <section id="get-started" className="scroll-mt-[88px]">
           <CTASection />
         </section>
-       
       </main>
 
       <Footer />
