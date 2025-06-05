@@ -26,7 +26,7 @@ export default function Home() {
       setMainHeight(mainRef.current.clientHeight);
     }
   }, []);
-
+  // v1
   useEffect(() => {
     const userAgent = typeof navigator !== "undefined" ? navigator.userAgent : "";
     const isMobileDevice = /Mobi|Android|iPhone|iPad|iPod/i.test(userAgent);
