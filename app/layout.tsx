@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   description: "Trade with our capital and keep up to 90% of the profits. Simple, transparent, and fair.",
   generator: 'Next.js',
   icons: {
-    icon: '/images/application-logo.webp',
-    apple: '/images/application-logo.webp',
-    shortcut: '/images/application-logo.webp'
+    icon: '/images/logo-favicon.webp',
+    apple: '/images/logo-favicon.webp',
+    shortcut: '/images/logo-favicon.webp'
   }
 }
 
@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/images/application-logo.webp" />
+        <link rel="icon" href="/images/logo-favicon.webp" />
       </head>
       <body className={manrope.className}>
         <SmoothScroll>{children}</SmoothScroll>
