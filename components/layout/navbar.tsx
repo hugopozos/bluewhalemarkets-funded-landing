@@ -3,10 +3,30 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react" // o cualquier ícono
+import { Menu, X } from "lucide-react" 
+import { usePathname, useRouter } from "next/navigation"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const goToSection = (sectionId: string) => {
+    if (pathname === "/") {
+      // Scroll directo en Home
+      const el = document.getElementById(sectionId)
+      if (el) {
+        // Scroll instantáneo sin animación
+        window.scrollTo(0, el.offsetTop - 88)
+      }
+    } else {
+      // Redirigir a Home con hash
+      router.push(`/#${sectionId}`)
+    }
+    setMenuOpen(false)
+  }
+
+  
 
   return (
     <header className="fixed top-6 left-2 right-2 z-50 bg-black bg-opacity-80 shadow-md rounded-2xl border border-gray-800 backdrop-blur-sm mx-auto max-w-6xl">
@@ -32,7 +52,7 @@ export default function Navbar() {
           }}>Home</Link>
           <Link href="#platform-preview" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">Platform</Link>
           <Link href="#trading-tools" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">Tools</Link>
-          <Link href="#challenges" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">Challenges</Link>
+          <Link href="#challenges" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors" >Challenges</Link>
           <Link href="#how-it-works" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors">How To</Link>
           
           <Link href="/contact" className="text-[16px] font-medium text-gray-300 hover:text-white transition-colors"
@@ -70,7 +90,11 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <div className="md:hidden px-4 pb-4 flex flex-col space-y-2">
-          <Link href="/" className="text-sm text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link href="/" className="text-sm text-gray-300 hover:text-white" onClick={(e) => {
+            e.preventDefault();
+            setMenuOpen(false);
+            window.location.href = '/'; 
+          }}>Home</Link>
           <Link href="#platform-preview" className="text-sm text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>Platform</Link>
           <Link href="#trading-tools" className="text-sm text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>Tools</Link>
           <Link href="#challenges" className="text-sm text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>Challenges</Link>
