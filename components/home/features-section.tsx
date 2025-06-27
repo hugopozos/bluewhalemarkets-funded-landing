@@ -102,7 +102,7 @@ export default function FeaturesSection() {
             <div className="mt-9 flex flex-col items-center relative z-10">
              
             <a
-            href="https://discord.gg/a2wRBcaT"
+            href="https://discord.gg/9wFdwJEdFk"
             target="_blank"
             rel="noopener noreferrer"
             className="relative w-44 py-3 px-5 rounded-full font-semibold text-white shadow-md transition-all duration-300 overflow-hidden group text-base text-center"
