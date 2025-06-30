@@ -43,8 +43,7 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
     },
     {
       question: "¿What leverage is offered?",
-      answer: ["1:50 for Forex",
-                "1:30 for indices and commodities",
+      answer: ["1:30",
                 "Using more than 50% of the available margin in a single trade is not allowed. This is not considered a violation, as the platform will simply block any attempt to open a trade exceeding this limit. This is to prevent “full margin,” “gambling,” or “all or nothing” behavior."],
     },
   
@@ -140,13 +139,13 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
       },
       {
         question: "Profit Split:",
-        answer:[" - 1st Payout: 70%",
+        answer:[" - 1st Payout: 60%",
 
 
-                " - 2nd Payout: 80%",
+                " - 2nd Payout: 70%",
 
 
-                " - 3rd and beyond: 90%"],
+                " - 3rd and beyond: 80%"],
       },
       {
         question: "Payout Schedule:",
