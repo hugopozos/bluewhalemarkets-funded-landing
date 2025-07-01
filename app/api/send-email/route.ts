@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 // (Opcional) Usa variables de entorno en lugar de password directo
-const EMAIL_USER = "funded@bluewhalemarkets.com";
-const EMAIL_PASS = "BwMk-22-25New"; // o process.env.EMAIL_PASS
+const EMAIL_USER = process.env.EMAIL_USER!;
+const EMAIL_PASS = process.env.EMAIL_PASS!;
 
 export async function POST(req: NextRequest) {
   const { name, email, trading_account, message } = await req.json();
