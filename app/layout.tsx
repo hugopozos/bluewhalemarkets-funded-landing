@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Manrope } from "next/font/google"
 import "./globals.css"
+import SmoothScroll from "@/components/smooth-scroll";
 
 const manrope = Manrope({ subsets: ["latin"] })
 
