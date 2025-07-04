@@ -53,6 +53,7 @@ export default function RootLayout({
         {/* End Meta Pixel Code */}
       </head>
       <body className={manrope.className}>
+        <SmoothScroll />
         {children}
       </body>
     </html>
