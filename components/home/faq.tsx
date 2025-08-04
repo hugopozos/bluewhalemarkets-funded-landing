@@ -38,8 +38,7 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
     {
       question: "¿Is Stop Loss mandatory?",
       answer:
-        `Yes. Every trade must include a Stop Loss when placed.
-        A first violation will result in a warning. A second violation will lead to immediate suspension or termination of the account`,
+      `Yes. Every trade must include a stop loss at the time of execution. A violation will result in immediate account suspension or termination.`,
     },
     {
       question: "¿What leverage is offered?",
