@@ -138,7 +138,7 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
       },
       {
         question: "Profit Split:",
-        answer:[" - 1st Payout: 60%",
+        answer:[" - 1st Payout: 50%",
 
 
                 " - 2nd Payout: 70%",
