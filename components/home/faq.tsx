@@ -99,6 +99,13 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
         question: "¿Can I use different IPs to trade?",
         answer: ["No. You are not allowed to connect from multiple geographic locations simultaneously."],
       },
+      { 
+        question: "What are the restricted trading strategies?",
+        answer: ["It is prohibited to use excessively large lot sizes in relation to the account’s capital.",
+          "You may not make more than 40% of the profit in a single trade."
+        ],
+      },
+
       {
         question: "Challenges",
         answer:  [" 1-Phase Challenge:",
