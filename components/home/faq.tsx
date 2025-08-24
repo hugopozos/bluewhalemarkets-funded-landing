@@ -97,7 +97,7 @@ const faqs: Record<FAQCategory, { question: string; answer: string | string[]  }
       },
       {
         question: "¿Can I use different IPs to trade?",
-        answer: ["No. You are not allowed to connect from multiple geographic locations simultaneously."],
+        answer: ["No. For security and compliance reasons, it is strictly prohibited to connect from multiple or changing IP addresses. All trading activity must be conducted from a single, consistent IP address."],
       },
       { 
         question: "What are the restricted trading strategies?",
