@@ -110,8 +110,26 @@ export default function ChallengesTable() {
   const [selectedChallenge, setSelectedChallenge] = useState("standard")
   const [selectedAmount, setSelectedAmount] = useState(25000)
 
+  const getPrice = (challengeType: string, amount: number) => {
+    // Asegurarse de que el tipo de desafío existe en el objeto pricing
+    if (!pricing[challengeType as keyof typeof pricing]) {
+      console.warn(`Challenge type "${challengeType}" not found in pricing`)
+      return 0
+    }
+    
+    const challengePricing = pricing[challengeType as keyof typeof pricing]
+    const price = challengePricing[amount as keyof typeof challengePricing]
+    
+    if (price === undefined) {
+      console.warn(`Price not found for ${challengeType} with amount ${amount}`)
+      return 0
+    }
+    
+    return price
+  }
+
   // Obtener el precio para el desafío y el monto seleccionados
-  const price = pricing[selectedChallenge as keyof typeof pricing][selectedAmount as keyof (typeof pricing)["standard"]]
+  const price = getPrice(selectedChallenge, selectedAmount)
 
   return (
     <section className="py-24 relative">
@@ -161,7 +179,8 @@ export default function ChallengesTable() {
             {fundingOptions.map((option) => (
               <button 
                 key={option.value}
-                className={`px-5 py-2 rounded-full text-sm m-1 ${selectedAmount === option.value ? "bg-gradient-to-br from-black to-gray-800 text-white" : "text-gray-400 hover:text-white"} transition-colors`}
+                  translate="no"
+                className={`px-5 py-2 rounded-full text-sm m-1 ${selectedAmount === option.value ? "bg-gradient-to-br from-black to-gray-800 text-white" : "text-gray-400 hover:text-white"} transition-colors notranslate`}
                 onClick={() => setSelectedAmount(option.value)}
               >
                 {option.label}
@@ -190,7 +209,7 @@ export default function ChallengesTable() {
               <div className="bg-[#0A0A0A]/80 border border-gray-800 rounded-xl p-6 flex flex-col items-center mb-6">
                 <div className="text-xs text-gray-400 mb-2">One-time payment</div>
                 <div className="flex items-baseline mb-1">
-                  <span className="text-4xl font-light">${price}</span>
+                  <span className="text-4xl font-light" translate="no">${price}</span>
                 </div>
                 <div className="text-xs text-gray-400 mb-6">For ${selectedAmount.toLocaleString()} account</div>
                 <button  onClick={() => {
