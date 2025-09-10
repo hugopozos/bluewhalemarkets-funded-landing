@@ -27,6 +27,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Blue Whale Markets Funded" />
+        <meta property="og:description" content="Trade with our capital and keep up to 90% of the profits. Simple, transparent, and fair." />
+        <meta property="og:image" content="https://funded.bluewhalemarkets.com/images/logo-favicon.webp" />
+        <meta property="og:url" content="https://funded.bluewhalemarkets.com" />
+        <meta property="og:type" content="website" />
+
         <link rel="icon" href="/images/logo-favicon.webp" />
 
         {/* Meta Pixel Code */}
